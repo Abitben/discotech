@@ -70,3 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "table_print", "~> 1.5"
+gem "devise", "~> 4.9"
+gem "stripe", "~> 8.3"
+gem "faker", "~> 3.1"
+gem "rspec-rails", "~> 6.0"
+gem "dotenv", "~> 2.8"
+gem "discogs-wrapper", "~> 2.5"
