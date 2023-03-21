@@ -1,0 +1,32 @@
+
+/* color presentation*/
+
+.color-container {
+  display: block;
+  width: 187px;
+  margin: 12px;
+  padding: 7px;
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(52,87,220,0.08);
+  transition: all 0.3s ease;
+}
+
+.rect-box {
+  width: 185px;
+  height: 190px;
+  border-radius: 4px;
+}
+
+.hex-value {
+  display: block;
+  color: #444;
+  user-select: none;
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin: 12px 0 8px;
+  text-transform: lowercase;
+}

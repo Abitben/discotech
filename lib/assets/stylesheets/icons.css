@@ -1,0 +1,17 @@
+/*icons*/
+
+i{
+  color: var(--bs-black);
+  font-size: 20px;
+}
+
+.bi-cart-fill{
+  color: var(--bs-regular-white);
+}
+
+
+.bi-search{
+  color: var(--bs-black);
+}
+
+

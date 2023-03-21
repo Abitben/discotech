@@ -1,0 +1,56 @@
+:root {
+  --bs-grey-logo: #2d3232;
+  --bs-gray-green-logo: #a3d9c8;
+  --bs-black: #000000;
+  --bs-yellow-btn: #dbc40a;
+  --bs-yellow-btn-hover: #fde74c;
+  --bs-light-blue: #b8cccc;
+  --bs-regular-white: #ffffff;
+  --bs-regular-darkgrey: #e5e5e5;
+  --bs-light-gray: #e0e0e0;
+  --bs-warning: #f59953;
+  --bs-danger: #fa6249;
+  --bs-success: #6efa9d;
+  --bs-info: #53a0ff;
+  --bs-buy-sell: #7053ff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+body {
+  color: #224;
+  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
+    cover no-repeat fixed;
+}
+
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* divider-color */
+
+/* Tracklist */
+
+.list-group-item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
