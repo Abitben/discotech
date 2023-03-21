@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_21_183657) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_21_184850) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,9 +23,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_183657) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cartlines", force: :cascade do |t|
+    t.bigint "album_id", null: false
+    t.bigint "cart_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_cartlines_on_album_id"
+    t.index ["cart_id"], name: "index_cartlines_on_cart_id"
+  end
+
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "collections", force: :cascade do |t|
+    t.bigint "album_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_collections_on_album_id"
+    t.index ["user_id"], name: "index_collections_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -56,6 +74,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_183657) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cartlines", "albums"
+  add_foreign_key "cartlines", "carts"
+  add_foreign_key "collections", "albums"
+  add_foreign_key "collections", "users"
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "users"
 end
