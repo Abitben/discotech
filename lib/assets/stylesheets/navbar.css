@@ -1,0 +1,53 @@
+
+/*navbar*/
+
+#header_logo img {
+  height: 40px;
+  width: 112px;
+  top: 13px;
+  fill: var(--bs-regular-white);
+}
+
+.navbar{
+  background-color: var(--bs-grey-logo);
+  height: 60px;
+}
+
+.dropdown:hover{
+  background-color: var(--bs-black) ;
+}
+
+.dropdown-toggle{
+  color: var(--bs-regular-white);
+}
+
+.dropdown-toggle:hover{
+  color: var(--bs-regular-white);
+}
+
+.nav-item{
+  list-style-type: none;
+  color: white;
+}
+
+.cart-icon-cont:hover{
+  background-color: var(--bs-black);
+}
+
+
+.dropdown-menu{
+  background-color: var(--bs-black);
+  color: white;
+}
+
+.dropdown-item{
+  color: white;
+}
+
+
+/* alternative */
+
+.navbar-alt {
+  background-color: var(--bs-gray-green-logo);
+  color: var(--bs-grey-logo) ;
+}
