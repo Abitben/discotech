@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'demo/show'
   resources :albums
   devise_for :users
   resources :users
