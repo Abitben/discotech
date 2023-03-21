@@ -11,4 +11,14 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap.min
+ *= require main
+ *= require accordion
+*= require albums
+*= require buttons
+*= require cards
+*= require colors
+*= require footer
+*= require forms
+*= require icons
+*= require navbar
  */
