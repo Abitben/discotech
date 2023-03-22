@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a id="header_logo" href="/fr" title="Aller à la page d'accueil Discogs.com">
-      <img src="assets/discogs-white.svg" style="fill: #a3d9c8" alt="Discogs">
-    </a>
+    <%= link_to "Home", class:"navbar-brand" do %>
+      <%= image_tag "Logo_Discotech_horiz_blue", size: "170x34" %>
+    <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto align-items-center">
+      <ul class="navbar-nav me-auto align-items-center justify-content-center">
         <form class="d-flex p-2">
-          <div class="input-group p-5 mt-3">
+          <div class="input-group p-5">
             <input type="text" class="form-control" placeholder="Rechercher des artistes, des albums, des genres ..." aria-label="Recipient's username" aria-describedby="button-addon2">
             <button class="btn btn-search" type="button" id="button-addon2">Search</button>
           </div>
@@ -52,14 +52,14 @@
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
           <li>
-            <%= button_to "Sign out", destroy_user_session_path, class:"nav-item p-2", method: :delete %>
+            <%= button_to "Log out", destroy_user_session_path, class:"nav-item p-2", method: :delete %>
           </li>
         <% else %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
             <div class="dropdown-menu">
-              <%= link_to "SignUp", new_user_registration_path, class:"dropdown-item" %>
-              <%= link_to "LogIn", new_user_session_path, class:"dropdown-item" %>
+              <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-form' %><br/><br/>
+              <%= link_to "Log in", new_user_session_path, class: "btn btn-login" %>
             </div>
             <% end %>
           </li>
