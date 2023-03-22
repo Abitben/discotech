@@ -65,3 +65,12 @@
   background-color: var(--bs-danger);
   border-color: var(--bs-danger);
 }
+
+.btn-warning{
+  color: black;
+}
+
+.btn-warning:hover{
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
