@@ -42,8 +42,11 @@
 }
 
 .flip-card-back-image {
+  backdrop-filter: blur(15px) ;
+  background-color: rgba(0,0,0,0.5);
   background-image: url('assets/img/vinyl.png');
   background-size: cover;
+ 
   background-repeat: no-repeat;
   background-position: center;
 }
