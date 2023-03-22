@@ -4,11 +4,9 @@
 
 <div id="users">
   <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
+    <%= render partial: 'users/user', layout: 'shared/card_layout', locals: {user: user} %>
+  
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<%= link_to "New user", new_user_path, class: 'btn btn-form' %>

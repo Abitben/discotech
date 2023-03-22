@@ -56,3 +56,12 @@
   background-color: var(--bs-yellow-btn-hover);
   color: var(--bs-grey-logo);
 }
+
+.btn-danger{
+  color: black;
+}
+
+.btn-danger:hover{
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
+}

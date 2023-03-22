@@ -36,11 +36,15 @@
 
 <%= %>
 
-  <div>
-  <%= link_to "Edit this user", edit_user_path(user) %> |
-  <%= link_to "Back to users", users_path %>
+  <p>
+      <%= link_to "Show this user", user, class: 'btn btn-info' %>
+    </p>
 
-  <%= button_to "Destroy this user", user, method: :delete %>
+  <hr>
+  <div>
+  <%= link_to "Edit this user", edit_user_path(user), class: 'btn btn-form' %> 
+  <%= link_to "Back to users", users_path, class: 'btn' %>
+  <%= button_to "Destroy this user", user, method: :delete, class: 'btn btn-danger' %>
 </div>
 
 </div>
