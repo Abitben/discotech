@@ -2,14 +2,51 @@
 
 <h1>Albums</h1>
 
-<div id="albums">
-  <% @albums.each do |album| %>
-    <%= render album %>
-    <p>
-      <%= link_to "Show this album", album %>
-    </p>
-  <% end %>
+<%# <div id="albums"> %>
+  <%# <% @albums.each do |album| %>
+    <%# <%= render album %>
+    <%# <p> %>
+      <%# <%= link_to "Show this album", album %>
+    <%# </p> %>
+  <%# <% end %> 
+<%# </div> %>
+<div class= "container" style="display: flex; justify-content: space-between;">
+<div>
+<h3>Meilleurs ventes</h3>
+<div class="card" style="width: 18rem;">
+  <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">text</p>
+  </div>
 </div>
+</div>
+
+<div>
+<h3>Vendeurs à la une</h3>
+<div class="card" style="width: 18rem;">
+  <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">text</p>
+  </div>
+</div>
+</div>
+
+<div>
+<h3>Catégorie à la une</h3>
+<div class="card" style="width: 18rem;">
+  <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">text</p>
+  </div>
+</div>
+</div>
+</div>
+
+<br>
+
 
 <%= link_to "New album", new_album_path %>
 
