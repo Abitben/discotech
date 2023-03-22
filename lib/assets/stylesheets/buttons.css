@@ -56,3 +56,8 @@
   background-color: var(--bs-yellow-btn-hover);
   color: var(--bs-grey-logo);
 }
+
+.btn-cart:hover {
+  background-color: #D9B8C2;
+  color: black
+}
