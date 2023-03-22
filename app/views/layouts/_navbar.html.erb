@@ -52,14 +52,14 @@
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
           <li>
-            <%= button_to "Sign out", destroy_user_session_path, class:"nav-item p-2", method: :delete %>
+            <%= button_to "Log out", destroy_user_session_path, class:"nav-item p-2", method: :delete %>
           </li>
         <% else %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
             <div class="dropdown-menu">
-              <%= link_to "SignUp", new_user_registration_path, class:"dropdown-item" %>
-              <%= link_to "LogIn", new_user_session_path, class:"dropdown-item" %>
+              <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-form' %>
+              <%= link_to "Log in", new_user_session_path, class: "btn btn-login" %>
             </div>
             <% end %>
           </li>
