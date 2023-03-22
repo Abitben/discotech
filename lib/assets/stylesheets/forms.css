@@ -9,7 +9,7 @@
 
 .form-control{
   border-radius: 20px;
-  width: 500px;
+  max-width: 500px;
   border-color: var(--bs-dark-purple);
 }
 
