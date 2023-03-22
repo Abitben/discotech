@@ -9,6 +9,6 @@ class User < ApplicationRecord
 
   has_many :orders
 
-  validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
-  validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
+ # validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
+ # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
 end
