@@ -98,6 +98,9 @@ GEM
       httparty (~> 0.14)
       oauth (~> 0.5.1)
     dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     faker (3.1.1)
       i18n (>= 1.8.11, < 2)
@@ -264,6 +267,7 @@ DEPENDENCIES
   devise (~> 4.9)
   discogs-wrapper (~> 2.5)
   dotenv (~> 2.8)
+  dotenv-rails
   faker (~> 3.1)
   importmap-rails
   jbuilder
