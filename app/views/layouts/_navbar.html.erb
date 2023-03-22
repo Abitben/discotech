@@ -48,12 +48,23 @@
       <li class="nav-item cart-icon-cont p-2 align-items-center">
         <i class="bi bi-cart-fill"></i>
       </li>
-      <li class="nav-item p-2">
-        <button class="btn btn-login" href="#">Connexion</button>
-      </li>
-      <li class="nav-item p-2">
-        <button class="btn btn-form">Inscription </button>
-      </li>
+      <ul class="navbar-nav float-end">
+      <li class="nav-item dropdown">
+        <% if user_signed_in? %>
+          <li>
+            <%= button_to "Sign out", destroy_user_session_path, class:"nav-item p-2", method: :delete %>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+            <div class="dropdown-menu">
+              <%= link_to "SignUp", new_user_registration_path, class:"dropdown-item" %>
+              <%= link_to "LogIn", new_user_session_path, class:"dropdown-item" %>
+            </div>
+            <% end %>
+          </li>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
