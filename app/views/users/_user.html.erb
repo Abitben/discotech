@@ -11,7 +11,7 @@
 
   <p>
     <strong>Adress:</strong>
-    <%= user.adress %>
+    <%= user.address %>
   </p>
 
   <p>
@@ -33,5 +33,18 @@
     <strong>Phone:</strong>
     <%= user.phone %>
   </p>
+
+<%= %>
+
+  <p>
+      <%= link_to "Show this user", user, class: 'btn btn-info' %>
+    </p>
+
+  <hr>
+  <div>
+  <%= link_to "Edit this user", edit_user_path(user), class: 'btn btn-form' %> 
+  <%= link_to "Back to users", users_path, class: 'btn' %>
+  <%= button_to "Destroy this user", user, method: :delete, class: 'btn btn-danger' %>
+</div>
 
 </div>

@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  max-width: 800px;
+
   max-height: auto;
   padding: 35px;
 
@@ -23,6 +23,7 @@
 
 .card-header {
   --bs-card-cap-bg: none;
+  border-bottom: none
 }
 
 .card-footer {
@@ -31,6 +32,7 @@
   --bs-card-cap-bg: none;
   position: absolute;
   bottom: 5px;
+  border-top: none;
 }
 
 .btn-c:hover {

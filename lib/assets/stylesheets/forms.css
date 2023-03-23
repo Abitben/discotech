@@ -8,8 +8,10 @@
 }
 
 .form-control{
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 50px ;
   border-radius: 20px;
-  width: 500px;
+  max-width: 500px;
   border-color: var(--bs-dark-purple);
 }
 

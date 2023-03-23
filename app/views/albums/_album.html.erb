@@ -1,22 +1,54 @@
-<div id="<%= dom_id album %>">
-  <p>
-    <strong>Title:</strong>
-    <%= album.title %>
-  </p>
-
-  <p>
-    <strong>Artist:</strong>
-    <%= album.artist %>
-  </p>
-
-  <p>
-    <strong>Year:</strong>
-    <%= album.year %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= album.price %>
-  </p>
-
+<div class = "row">
+  <div class = "col-sm-4">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
+        </div>
+        <div class="flip-card-back flip-card-back-image text-center align-items-center">
+          <br>
+          <h2><%= album.title %></h2>
+          <h2><%= album.artist %></h2>
+          <p><%= album.year %></p>
+          <p><%= album.price %>€</p>
+          <a href="#" class="btn btn-info">More info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card-header ">
+      <h3 class="card-title"> <%= album.title %></h3>
+      <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
+      <div class ="card-body">
+      <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
+      <h6 class ="card-text"> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
+      <h6 class ="card-text"> <strong>Pays </strong>: US </h6>
+      <h6 class ="card-text"> <strong>Sortie</strong> : févr. 2023 </h6>
+      <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
+      <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
+      </div>
+      <div class="card-footer">
+      <h6> <strong>Label </strong>: Parlophone – 190296159305 </h6>
+      <h6> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
+      <h6> <strong>Pays </strong>: US </h6>
+      <h6> <strong>Sortie</strong> : févr. 2023 </h6>
+      <h6> <strong>Genre </strong>: Electronic </h6>
+      <h6> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
+      <div class="card-footer mb-4">
+        <%= link_to "Ajouter au panier", edit_album_path(album), class: 'btn btn-cart' %>
+        <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
+      </div>
+    </div>
+  </div>
+  <% if controller_name == "albums" && action_name == "show" %>
+  <div class="col-sm-3">
+    <button class="myaccordion">Labels</button>
+    <div class="mypanel">
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br>
+    </div>
+  </div>
+  <% end %>
 </div>
