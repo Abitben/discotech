@@ -44,15 +44,13 @@
             <a class="dropdown-item" href="#">Separated link</a>
           </div>
         </li>
-      </ul>
       <li class="nav-item cart-icon-cont p-2 align-items-center">
         <i class="bi bi-cart-fill"></i>
       </li>
-      <ul class="navbar-nav float-end">
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
           <li>
-            <%= button_to "Log out", destroy_user_session_path, class:"nav-item p-2", method: :delete %>
+            <%= button_to "Log out", destroy_user_session_path, class:"btn btn-warning", method: :delete %>
           </li>
         <% else %>
           <li class="nav-item dropdown">
@@ -64,7 +62,6 @@
             <% end %>
           </li>
         </li>
-      </ul>
-    </div>
+      </ul></div>
   </div>
 </nav>
