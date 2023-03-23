@@ -80,3 +80,12 @@
   background-color: var(--bs-warning);
   border-color: var(--bs-warning);
 }
+
+.btn-success {
+  color: black;
+}
+
+.btn-success:hover{
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}  
