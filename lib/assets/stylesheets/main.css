@@ -49,3 +49,7 @@ h3 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.container-album-details {
+  display: flex;
+  flex-direction: space-between;
+}
