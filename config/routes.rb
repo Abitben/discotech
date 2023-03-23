@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'carts/show'
+  get '/', to:'home#index'
   get 'demo/show'
   resources :albums
   devise_for :users
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/KitUI', to: 'demo#show'
 
   get 'carts/:id' => "carts#show", as: "cart"
+  get 'carts/show'
   delete 'carts/:id' => "carts#destroy"
 
   post 'cartlines' => "cartlines#create"
