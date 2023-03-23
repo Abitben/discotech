@@ -17,9 +17,9 @@
 
 *,
 *:before,
-*:after {
+/* *:after {
   box-sizing: inherit;
-}
+} */
 
 p {
   margin: 0;

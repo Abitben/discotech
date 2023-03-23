@@ -29,7 +29,7 @@
       <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
       </div>
       <div class="card-footer">
-        <%= link_to "Ajouter au panier", edit_album_path(album), class: 'btn btn-cart' %>
+        <%= button_to "Ajouter au panier", cartlines_path(:album_id => album.id), class: 'btn cart-btn' %>
         <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
       </div>
     </div>

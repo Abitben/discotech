@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  get 'carts/show'
   get 'demo/show'
   resources :albums
   devise_for :users
   resources :users
-
   get '/KitUI', to: 'demo#show'
+
+  get 'carts/:id' => "carts#show", as: "cart"
+  delete 'carts/:id' => "carts#destroy"
+
+  post 'cartlines' => "cartlines#create"
+  get 'cartlines/:id' => "cartlines#show", as: "cartline"
+  delete 'cartlines/:id' => "cartlines#destroy"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
