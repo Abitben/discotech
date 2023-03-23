@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to:'home#index'
+  get '/', to:'home#index', as: 'root'
   get 'demo/show'
   resources :albums
   devise_for :users
