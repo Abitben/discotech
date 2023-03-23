@@ -5,10 +5,6 @@
     # See lineItem section below for explanation of cartline links
     <ul>
       <li>
-        <%= link_to "Add one", cartline_add_path(:id => cartline), method: :post %>
-        <%= link_to "Reduce one", cartline_reduce_path(:id => cartline), method: :post %>
-      </li>
-      <li>
         <%= link_to "Remove item", cartline_path(cartline), method: :delete %>
       </li>
     </ul>
