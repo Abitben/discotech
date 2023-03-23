@@ -20,6 +20,7 @@
     <div class="card-header ">
       <h3 class="card-title"> <%= album.title %></h3>
       <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
+      </div>
       <div class ="card-body">
       <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
       <h6 class ="card-text"> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
@@ -28,18 +29,10 @@
       <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
       <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
       </div>
-      <div class="card-footer">
-      <h6> <strong>Label </strong>: Parlophone – 190296159305 </h6>
-      <h6> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
-      <h6> <strong>Pays </strong>: US </h6>
-      <h6> <strong>Sortie</strong> : févr. 2023 </h6>
-      <h6> <strong>Genre </strong>: Electronic </h6>
-      <h6> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
-      <div class="card-footer mb-4">
+      <div class="card-footer mb-3">
         <%= link_to "Ajouter au panier", edit_album_path(album), class: 'btn btn-cart' %>
         <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
       </div>
-    </div>
   </div>
   <% if controller_name == "albums" && action_name == "show" %>
   <div class="col-sm-3">
