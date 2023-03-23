@@ -15,6 +15,12 @@
   --bs-buy-sell: #7053ff;
 }
 
+*,
+*:before,
+/* *:after {
+  box-sizing: inherit;
+} */
+
 
 p {
   margin: 0;
