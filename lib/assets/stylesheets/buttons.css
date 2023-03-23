@@ -57,6 +57,12 @@
   color: var(--bs-grey-logo);
 }
 
+
+.btn-cart:hover {
+  background-color: #D9B8C2;
+  color: black
+}
+
 .btn-danger{
   color: black;
 }
