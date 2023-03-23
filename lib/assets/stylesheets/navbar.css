@@ -11,7 +11,10 @@
 }
 
 .dropdown:hover {
-  background-color: var(--bs-black);
+  background-color: var(--bs-gray-green-logo);
+  border-radius: 40px;
+  width: 125px;
+  justify-items: center;
 }
 
 .dropdown-toggle {
@@ -27,7 +30,8 @@
 }
 
 .cart-icon-cont:hover {
-  background-color: var(--bs-black);
+  background-color: var(--bs-gray-green-logo);
+  border-radius: 40px;
 }
 
 .dropdown-menu {
