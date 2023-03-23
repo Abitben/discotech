@@ -1,28 +1,15 @@
 <div class = "row">
-  <div class = "col-sm-3 col-md-5">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-        </div>
-        <div class="flip-card-back flip-card-back-image text-center align-items-center">
-          <br>
-          <h2><%= album.title %></h2>
-          <h2><%= album.artist %></h2>
-          <p><%= album.year %></p>
-          <p><%= album.price %>€</p>
-          <%= link_to "Plus d'info", album_path(album), class: 'btn btn-info'%>
-        </div>
-      </div>
-    </div>
+<div class = "col-sm-3 col-md-5">
+
+    <%= render partial: "shared/cover", locals: {album: album} %>
     <%= render partial: "albums/add_to_cart", locals: {album: album} %>
-        <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
+    <%= link_to "Retour aux albums", albums_path, class: 'btn btn-cart' %>
   </div>
   <div class="col-sm-4">
     <div class="card-header ">
       <h3 class="card-title"> <%= album.title %></h3>
       <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
-      <h4 class="card-title"> <strong> <%= album.price %> € </strong></h4>
+      <h4 class="card-title"> <strong>$ <%= album.price %></strong></h4>
       </div>
       <div class ="card-body">
       <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>

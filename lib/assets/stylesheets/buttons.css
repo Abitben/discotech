@@ -57,6 +57,10 @@
   color: var(--bs-grey-logo);
 }
 
+.btn-cart {
+  padding: var(--space-s);
+  margin: var(--space-xs)
+}
 
 .btn-cart:hover {
   background-color: #D9B8C2;
