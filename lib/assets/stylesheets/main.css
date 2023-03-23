@@ -13,7 +13,20 @@
   --bs-success: #98D99F;
   --bs-info: #53a0ff;
   --bs-buy-sell: #7053ff;
+  --space-xxxs: 0.25rem; 
+  --space-xxs: 0.375rem; 
+  --space-xs: 0.5rem; 
+  --space-s: 0.75rem;
+  --space-m: 1rem; 
+  --space-l: 1.5rem; 
+  --space-xl: 2rem; 
+  --space-xxl: 2.5rem; 
+  --space-xxxl: 3rem; 
+  --space-xxxxl: 4rem; 
 }
+
+
+
 
 p {
   margin: 0;

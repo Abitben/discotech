@@ -3,8 +3,15 @@
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-homepage {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
   perspective: 1000px;
 }
 
