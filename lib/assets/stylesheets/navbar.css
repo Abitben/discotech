@@ -10,10 +10,20 @@
   }
 }
 
+.dropdown {
+  text-align: center;
+}
+
+.navbar-nav {
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: white;
+}
+
 .dropdown:hover {
   background-color: var(--bs-gray-green-logo);
-  border-radius: 40px;
-  width: 125px;
+  border-radius: 20px;
+  text-align: center;
+  width: auto;
   justify-items: center;
 }
 
@@ -40,6 +50,10 @@
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-item {
+  border-radius: 20px;
 }
 
 
