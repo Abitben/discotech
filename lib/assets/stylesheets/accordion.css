@@ -47,6 +47,12 @@
   transition: max-height 0.2s ease-out;
 }
 
+@media (max-width: 576px) {
+  .myaccordion, .mypanel {
+    max-width: 300px;
+  }
+}
+
 .mypanel li {
   margin-top: 6px;
   margin-bottom: 6px;
