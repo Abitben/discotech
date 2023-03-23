@@ -8,7 +8,7 @@
   .navbar {
     height: 70px;
   }
-
+}
 
 
 .dropdown {
@@ -36,6 +36,7 @@
 .navbar-nav {
   --bs-nav-link-color: white;
   --bs-nav-link-hover-color: white;
+}
 
 .navbar{
   background-color: var(--bs-grey-logo);
