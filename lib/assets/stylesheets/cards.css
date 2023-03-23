@@ -46,3 +46,25 @@
   border-color: var(--bs-yellow-btn-hover);
   color: var(--bs-black);
 }
+
+.card-home{
+
+  margin-left: 0;
+  margin-right: 0;
+  width: 350px;
+  max-height: auto;
+  padding: 15px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+}
+.row{
+  justify-content: space-between;
+}
+h2{
+  color: #2E4D4D;
+}
