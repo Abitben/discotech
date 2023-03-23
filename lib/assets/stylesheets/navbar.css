@@ -1,7 +1,7 @@
 /*navbar*/
 
 .navbar {
-  background-color: var(--bs-grey-logo); 
+  background-color: var(--bs-grey-logo);
 }
 
 @media (min-width: 992px) {
