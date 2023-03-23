@@ -1,5 +1,5 @@
 <div class = "row">
-  <div class = "col-sm-4">
+  <div class = "col-sm-3 col-md-5">
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
@@ -11,15 +11,18 @@
           <h2><%= album.artist %></h2>
           <p><%= album.year %></p>
           <p><%= album.price %>€</p>
-          <a href="#" class="btn btn-info">More info</a>
+          <%= link_to "Plus d'info", album_path(album), class: 'btn btn-info'%>
         </div>
       </div>
     </div>
+    <%= render partial: "albums/add_to_cart", locals: {album: album} %>
+        <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
   </div>
   <div class="col-sm-4">
     <div class="card-header ">
       <h3 class="card-title"> <%= album.title %></h3>
       <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
+      <h4 class="card-title"> <strong> <%= album.price %> € </strong></h4>
       </div>
       <div class ="card-body">
       <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
@@ -28,10 +31,6 @@
       <h6 class ="card-text"> <strong>Sortie</strong> : févr. 2023 </h6>
       <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
       <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
-      </div>
-      <div class="card-footer mb-3">
-        <%= link_to "Ajouter au panier", edit_album_path(album), class: 'btn btn-cart' %>
-        <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
       </div>
   </div>
   <% if controller_name == "albums" && action_name == "show" %>

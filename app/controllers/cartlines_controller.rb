@@ -10,22 +10,23 @@ def create
       # Find the cartline with the chosen_album
       @cartline = current_cart.cartlines.find_by(:album_id => chosen_album)
       # Iterate the cartline's quantity by one
-      puts "*"*12
-      puts "IF"
-      puts "*"*12
     else
       @cartline = Cartline.new
       @cartline.cart = current_cart
       @cartline.album = chosen_album
-      puts "*"*12
-      puts "ELSE"
-      puts "*"*12
     end
   
     # Save and redirect to cart show path
     @cartline.save!
     redirect_to cart_path(current_cart)
 end
+
+  def destroy
+    puts "coucou"
+    @cartline = Cartline.find(params[:id])
+    @cartline.destroy
+    redirect_to cart_path(@current_cart)
+  end  
   
 private
     def cartline_params

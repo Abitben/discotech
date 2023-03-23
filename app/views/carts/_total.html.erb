@@ -1,0 +1,4 @@
+<h3>Sub total: <%= number_to_currency(cart.sub_total) %></h3>
+<%= link_to "Proceed to checkout, Stripe", albums_path, class: 'btn btn-success' %><br>
+<hr>
+<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-warning' %>
