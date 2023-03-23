@@ -8,31 +8,24 @@
   --bs-regular-white: #ffffff;
   --bs-regular-darkgrey: #e5e5e5;
   --bs-light-gray: #e0e0e0;
-  --bs-warning: #f59953;
-  --bs-danger: #fa6249;
-  --bs-success: #6efa9d;
+  --bs-warning: #dfa959;
+  --bs-danger: #d0635a;
+  --bs-success: #98D99F;
   --bs-info: #53a0ff;
   --bs-buy-sell: #7053ff;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 
 p {
   margin: 0;
 }
 
-p:not(:last-child) {
-  margin-bottom: 1.5em;
-}
-
 body {
   color: #224;
-  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
-    cover no-repeat fixed;
+  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -51,6 +44,8 @@ h3 {
 
 /* Tracklist */
 
+
 .list-group-item {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
