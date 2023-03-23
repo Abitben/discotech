@@ -1,5 +1,5 @@
 <div class = "row">
-  <div class = "col-sm-3">
+  <div class = "col-sm-4">
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
@@ -20,75 +20,28 @@
     <div class="card-header ">
       <h3 class="card-title"> <%= album.title %></h3>
       <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
-      <h6> <strong>Label </strong>: Parlophone – 190296159305 </h6>
-      <h6> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
-      <h6> <strong>Pays </strong>: US </h6>
-      <h6> <strong>Sortie</strong> : févr. 2023 </h6>
-      <h6> <strong>Genre </strong>: Electronic </h6>
-      <h6> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
-      <div class="card-footer mb-4">
-        <%= link_to "Ajouter au panier", edit_album_path(@album), class: 'btn btn-cart' %>
+      <div class ="card-body">
+      <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
+      <h6 class ="card-text"> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
+      <h6 class ="card-text"> <strong>Pays </strong>: US </h6>
+      <h6 class ="card-text"> <strong>Sortie</strong> : févr. 2023 </h6>
+      <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
+      <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
+      </div>
+      <div class="card-footer">
+        <%= link_to "Ajouter au panier", edit_album_path(album), class: 'btn btn-cart' %>
         <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
       </div>
     </div>
   </div>
+  <% if controller_name == "albums" && action_name == "show" %>
   <div class="col-sm-3">
-   <button class="myaccordion">Tracklist</button>
+    <button class="myaccordion">Labels</button>
     <div class="mypanel">
       <br>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Track</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">A1</th>
-            <td>La Femme D'Argent</td>
-          
-          </tr>
-          <tr>
-            <th scope="row">A2</th>
-            <td>Sexy Boy</td>
-
-          </tr>
-          <tr>
-            <th scope="row">A3</th>
-            <td colspan="2">All I Need</td>
-          </tr>
-          <tr>
-            <th scope="row">A4</th>
-            <td colspan="2">Kelly Watch The Stars</td>
-          </tr>
-          <tr>
-            <th scope="row">B1</th>
-            <td colspan="2">Talisman</td>
-          </tr>
-          <tr>
-            <th scope="row">B2</th>
-            <td colspan="2">Remember</td>
-          </tr>
-          <tr>
-            <th scope="row">B3</th>
-            <td colspan="2">You Make It Easy</td>
-          </tr>
-          <tr>
-            <th scope="row">B4</th>
-            <td colspan="2">Ce matin La</td>
-          </tr>
-          <tr>
-            <th scope="row">B5</th>
-            <td colspan="2">New Star In The Sky</td>
-          </tr>
-          <tr>
-            <th scope="row">B6</th>
-            <td colspan="2">Le Voyage De Penelope</td>
-          </tr>
-        </tbody>
-      </table>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <br>
     </div>
   </div>
+  <% end %>
 </div>
