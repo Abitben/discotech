@@ -8,8 +8,17 @@
   .navbar {
     height: 70px;
   }
+
+
+
+.dropdown {
+  text-align: center;
 }
 
+.navbar-nav {
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: white;
+}
 
 .dropdown {
   text-align: center;
@@ -27,7 +36,6 @@
 .navbar-nav {
   --bs-nav-link-color: white;
   --bs-nav-link-hover-color: white;
-}
 
 .navbar{
   background-color: var(--bs-grey-logo);

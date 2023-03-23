@@ -56,3 +56,36 @@
   background-color: var(--bs-yellow-btn-hover);
   color: var(--bs-grey-logo);
 }
+
+
+.btn-cart:hover {
+  background-color: #D9B8C2;
+  color: black
+}
+
+.btn-danger{
+  color: black;
+}
+
+.btn-danger:hover{
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
+}
+
+.btn-warning{
+  color: black;
+}
+
+.btn-warning:hover{
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
+.btn-success {
+  color: black;
+}
+
+.btn-success:hover{
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}  
