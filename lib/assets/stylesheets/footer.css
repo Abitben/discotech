@@ -2,6 +2,7 @@
   padding:40px 0;
   background-color: var(--bs-grey-logo);
   color:#ffffff;
+  margin-top: auto;
 }
 
 .footer-basic ul {
@@ -46,7 +47,7 @@
 }
 
 .footer-basic .social > a:hover {
-  opacity:0.9;
+  opacity:1;
 }
 
 .footer-basic .copyright {

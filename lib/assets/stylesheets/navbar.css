@@ -11,6 +11,7 @@
 .navbar{
   background-color: var(--bs-grey-logo);
   height: 60px;
+  margin-bottom: auto;
 }
 
 .dropdown:hover{
