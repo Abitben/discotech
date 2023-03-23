@@ -26,6 +26,8 @@
 
 .footer-basic ul a:hover {
   opacity:1;
+  color:var(--bs-gray-green-logo);
+
 }
 
 .footer-basic .social {
@@ -44,6 +46,7 @@
   border:1px solid #ccc;
   margin:0 8px;
   opacity:0.75;
+  background-color:var(--bs-gray-green-logo);
 }
 
 .footer-basic .social > a:hover {
@@ -55,4 +58,5 @@
   text-align:center;
   font-size:13px;
   margin-bottom:0;
+  color:var(--bs-gray-green-logo);
 }
