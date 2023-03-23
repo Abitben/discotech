@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post 'cartlines' => "cartlines#create"
   get 'cartlines/:id' => "cartlines#show", as: "cartline"
-  delete 'cartlines/:id' => "cartlines#destroy"
+  delete 'cartlines/:id' => "cartlines#destroy", as: 'cartline_destroy'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

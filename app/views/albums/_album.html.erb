@@ -11,7 +11,7 @@
           <h2><%= album.artist %></h2>
           <p><%= album.year %></p>
           <p><%= album.price %>€</p>
-          <a href="#" class="btn btn-info">More info</a>
+          <%= link_to "Plus d'info", album_path(album), class: 'btn btn-info'%>
         </div>
       </div>
     </div>
@@ -20,6 +20,7 @@
     <div class="card-header ">
       <h3 class="card-title"> <%= album.title %></h3>
       <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
+      <h4 class="card-title"> <strong> <%= album.price %> € </strong></h4>
       </div>
       <div class ="card-body">
       <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
@@ -30,9 +31,11 @@
       <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
       </div>
       <div class="card-footer mb-3">
-        <%= link_to "Ajouter au panier", edit_album_path(album), class: 'btn btn-cart' %>
+      <div class="row">
+        <%= render partial: "albums/add_to_cart", locals: {album: album} %>
         <%= link_to "Retour aux albums", albums_path, class: 'btn cart-btn' %>
       </div>
+  </div>
   </div>
   <% if controller_name == "albums" && action_name == "show" %>
   <div class="col-sm-3">
