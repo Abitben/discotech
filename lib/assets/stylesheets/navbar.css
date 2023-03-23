@@ -10,6 +10,16 @@
   }
 }
 
+
+.dropdown {
+  text-align: center;
+}
+
+.navbar-nav {
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: white;
+}
+
 .dropdown {
   text-align: center;
 }
