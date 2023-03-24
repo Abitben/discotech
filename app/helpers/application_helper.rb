@@ -10,4 +10,10 @@ module ApplicationHelper
       redirect_to root_path
     end
   end
+
+  def profile_completed?
+    if current_user.address == nil
+      redirect_to edit_user_path(current_user)
+    end
+  end
 end

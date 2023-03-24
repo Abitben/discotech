@@ -1,4 +1,6 @@
 class CheckoutController < ApplicationController
+  before_action :authenticate_user!
+  before_action :profile_completed?
 
   def create
     @total = params[:total].to_d
