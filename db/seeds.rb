@@ -47,7 +47,7 @@ puts "cart is okay"
   )
 end
 
-User.create(email: "admin@discotech", password: "admin", is_admin: true)
+User.create(email: "admin@discotech", password: "admins", is_admin: true)
 puts "user is okay"
 
 
