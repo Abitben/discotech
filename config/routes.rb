@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   get '/', to:'home#index', as: 'root'
+  get '/KitUI', to: 'demo#show'
   get 'demo/show'
   resources :albums
   devise_for :users
   resources :users
-  get '/KitUI', to: 'demo#show'
 
   get 'carts/:id' => "carts#show", as: "cart"
   get 'carts/show'
