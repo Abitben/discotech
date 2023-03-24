@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   include UsersHelper
   before_action :set_user, only: %i[ show edit update destroy ]
-  before_action :is_admin?, only: [:index]
+  before_action :is_admin?, only: %i[ index ]
   before_action :verify_user?, only: %i[ show edit update destroy ]
+
 
   # GET /users or /users.json
   def index
