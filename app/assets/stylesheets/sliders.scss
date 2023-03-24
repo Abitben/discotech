@@ -11,6 +11,21 @@ $animationSpeed: 40s;
 	100% { transform: translateX(calc(-250px * 7))}
 }
 
+@keyframes antiscroll {
+	0% { transform: translateX(calc(-250px * 7)); }
+	100% { transform: translateX(0); }
+}
+
+.my-jumbotron {
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+.text-jumbotron {
+	position: relative;
+	top: 50%;
+  left: 50%;
+	color: white;
+}
 
 // Styling
 .slider {
@@ -47,6 +62,13 @@ $animationSpeed: 40s;
 		display: flex;
 		width: calc(250px * 14);
 	}
+
+	.anti-slide-track {
+		animation: antiscroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+
 	
 	.slide {
 		height: 150px;
