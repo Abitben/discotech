@@ -46,6 +46,8 @@ puts "cart is okay"
     password: Faker::Internet.password(min_length: 8),
   )
 end
+
+User.create(email: "admin@discotech", password: "admin", is_admin: true)
 puts "user is okay"
 
 
