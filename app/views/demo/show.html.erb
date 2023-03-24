@@ -1,3 +1,19 @@
+</div>
+
+  <div class="slider">
+    <div class="slide-track">
+      <% 12.times do %>
+        <div class="slide">
+          <% random = rand(1..1000)%>
+          <% if @wrapper.get_release(random).message != 'Release not found.' %>
+            <%= image_tag(@wrapper.get_release(random).thumb) %>
+          <%end%>
+        </div>
+      <%end%>
+      </div>
+    </div>
+
+  
   <!-- Navbar
       ================================================== -->
   <div class="bs-docs-section clearfix">
