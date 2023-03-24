@@ -12,8 +12,10 @@ module ApplicationHelper
   end
 
   def profile_completed?
-    if current_user.address == nil
+    exceptions = ["reset_password_token", "reset_password_sent_at", "remember_created_at", "is_admin"] 
+    if current_user.attributes.except(*exceptions).any? { |_, attributes| attributes.nil? }  
       redirect_to edit_user_path(current_user)
-    end
+  end
+
   end
 end
