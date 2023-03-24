@@ -13,7 +13,7 @@ module ApplicationHelper
 
   def profile_completed?
     if current_user.address == nil
-      redirect_to new_user_path
+      redirect_to edit_user_path(current_user)
     end
   end
 end
