@@ -13,7 +13,7 @@ wrapper = Discogs::Wrapper.new("Test OAuth", user_token: "paamjOrFUPostpOgjjwwmr
 10.times do
   
  release = wrapper.get_release(rand(1..10000))
- unless release.message == 'Release not found.'
+  unless release.message == 'Release not found.'
     Album.create!(
       title: release.title,
       artist: release.artists[0].name,
@@ -52,8 +52,8 @@ puts "user is okay"
 # seed for orders table
 10.times do
   Order.create!(
-    user_id: Faker::Number.between(from: 1, to: 10),
-    cart_id: Faker::Number.between(from: 1, to: 10),
+    user_id: User.all.sample.id,
+    cart_id: Cart.all.sample.id,
   )
 end
 puts "order is okay"
@@ -61,8 +61,8 @@ puts "order is okay"
 # seed for cartlines table
 10.times do
   Cartline.create!(
-    album_id: Faker::Number.between(from: 1, to: 10),
-    cart_id: Faker::Number.between(from: 1, to: 10),
+    album_id: Album.all.sample.id,
+    cart_id: Cart.all.sample.id,
   )
 end
 puts "cartline is okay"
@@ -70,8 +70,8 @@ puts "cartline is okay"
 # seed for collections table
 10.times do
   Collection.create!(
-    album_id: Faker::Number.between(from: 1, to: 10),
-    user_id: Faker::Number.between(from: 1, to: 10),
+    album_id: Album.all.sample.id,
+    user_id: User.all.sample.id,
   )
 end
-puts "cartline is okay"
+puts "collection is okay"
