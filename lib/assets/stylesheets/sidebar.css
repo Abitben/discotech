@@ -9,8 +9,10 @@
     .sidebar-col{
       display: none;
     }
-    .nav-item-sidebar {
-      margin-left: var(--space-l);
-    }    
   }
 
+  @media (min-width: 992px) {
+  .nav-item-sidebar {
+    margin-left: var(--space-l);
+  }    
+  }
