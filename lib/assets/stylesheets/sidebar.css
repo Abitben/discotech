@@ -1,11 +1,16 @@
-/* @media (min-width: 992px) { */
+
   .sidebar-col {
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
   }
-/* } */
 
-.nav-item-sidebar {
-  margin-left: var(--space-l);
-}
+  @media (max-width: 992px) {
+    .sidebar-col{
+      display: none;
+    }
+    .nav-item-sidebar {
+      margin-left: var(--space-l);
+    }    
+  }
+
