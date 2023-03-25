@@ -13,11 +13,14 @@
   </head>
   <body>
     <%= render 'layouts/navbar'%>
+    <% if user_signed_in? %>
     <div class='row'>
       <div class='col-lg-2 sidebar-col'>
-        <%= render partial: 'layouts/sidebar' %>
+          <%= render partial: 'layouts/sidebar' %>
       </div>
+
       <div class='col-8'>
+             <%end%>
         <div class="container">
           <%= yield %>
         </div>
