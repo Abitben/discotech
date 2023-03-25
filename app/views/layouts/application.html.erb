@@ -15,12 +15,11 @@
     <%= render 'layouts/navbar'%>
     <% if user_signed_in? %>
     <div class='row'>
-      <div class='col-lg-2 sidebar-col'>
+      <div class='col-lg-2 sidebar-col hidden-lg'>
           <%= render partial: 'layouts/sidebar' %>
       </div>
-
       <div class='col-8'>
-             <%end%>
+      <%end%>
         <div class="container">
           <%= yield %>
         </div>
