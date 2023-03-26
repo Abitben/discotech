@@ -21,12 +21,14 @@
               <button class="btn btn-search" type="button" id="button-addon2">Search</button>
             </div>
           </form>
+          <% if user_signed_in? %>
           <li class="nav-item dropdown under-992px">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon espace</a>
             <ul class="dropdown-menu">
             <%= render partial: "layouts/sidebar_content"%>
             </ul>
           </li>
+          <%end%>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Explorer</a>
             <div class="dropdown-menu">
