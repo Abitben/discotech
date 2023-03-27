@@ -7,9 +7,9 @@ class Copy < ApplicationRecord
     etat_acceptable: 4,
     mauvais_etat: 5,
     tres_mauvais_etat: 6,
-    déchirée: 7,
-    abîmée: 8,
-    manquante: 9}, _suffix: true
+    dechiree: 7,
+    abimee: 8,
+    manquante: 9}, suffix: true
 
   enum :media_condition, {
     neuf: 0,
@@ -19,9 +19,9 @@ class Copy < ApplicationRecord
     etat_acceptable: 4,
     mauvais_etat: 5,
     tres_mauvais_etat: 6,
-    rayé: 7,
+    raye: 7,
     saute: 8,
-    endommagé: 9 }, _suffix: true
+    endommage: 9 }, suffix: true
   
   belongs_to :album
   belongs_to :user
