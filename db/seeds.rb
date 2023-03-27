@@ -51,6 +51,9 @@ puts "user is okay"
   Copy.create!(
     album_id: Album.all.sample.id,
     user_id: User.all.sample.id,
+    sleeve_condition: "okay",
+    media_condition: "okay",
+    status: rand(0..1),
   )
 end
 puts "copy is okay"
