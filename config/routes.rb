@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get 'demo/show'
   resources :albums
   devise_for :users
-  resources :users
+  resources :users do
+    resources :wishlist, only: [:index]
+    resources :collection, only: [:index]
+  end
 
   get 'carts/:id' => "carts#show", as: "cart"
   get 'carts/show'
