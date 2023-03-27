@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"> Titre </th>
+      <th scope="col"> Artist </th>
+      <th scope="col"> Year </th>
+      <th scope="col"> Plus d'info sur l'album </th>
+    </tr>
+  </thead>
+  <tbody>
+      <%= render partial: "wishlist/wished", collection: @wished %>
+  </tbody>
+</table>
