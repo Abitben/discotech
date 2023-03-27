@@ -1,5 +1,6 @@
-<h1>Releases#show</h1>
-<p>Find me in app/views/releases/show.html.erb</p>
+
+<div class = "mypanel">
+
 <h2>Album details</h2>
 <p>Nom : <%= @wrapper.get_artist("89865").name =%></p>
 <p>Titre album : <%= @wrapper.get_release("240536").title =%></p>
@@ -17,19 +18,17 @@
     <table class="table">
       <thead>
         <tr>
-          <li>
-            <th scope="col">#</th>
-            <th scope="col">Track</th>
-            <th scope="col">Duration</th>
-          </li>
+          <th scope="col">#</th>
+          <th scope="col">Track</th>
+          <th scope="col">Duration</th>
         </tr>
       </thead>
       <tbody>
-        <% @release.each do |album| %>
+        <% @release.tracklist.each do |track| %>
           <tr>
-            <th scope="row"><%= @release.tracklist[0].position %></th>
-            <td><%= @release.tracklist[0].title %></td>
-            <td><%= @release.tracklist[0].duration %></td>
+            <td><%= track.position %></td>
+            <td><%= track.title %></td>
+            <td><%= track.duration %></td>
           </tr>
         <% end %>
       </tbody>
@@ -39,10 +38,4 @@
 </div>
 <div class="col-sm-4">
 </div>
-
-      *********
-      <%= @release.tracklist[0] %><br>
-      <%= @release.tracklist[0].class %><br>
-      !!!!!!!!!!!!<br>
-      <%= @release.tracklist[0].position %><br>
-      <%= @release.tracklist[0].position.class %><br>
+</div>
