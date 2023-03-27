@@ -9,49 +9,14 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Track</th>
+            <th scope="col">Duration</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">A1</th>
-            <td>La Femme D'Argent</td>
-          </tr>
-          <tr>
-            <th scope="row">A2</th>
-            <td>Sexy Boy</td>
-          </tr>
-          <tr>
-            <th scope="row">A3</th>
-            <td colspan="2">All I Need</td>
-          </tr>
-          <tr>
-            <th scope="row">A4</th>
-            <td colspan="2">Kelly Watch The Stars</td>
-          </tr>
-          <tr>
-            <th scope="row">B1</th>
-            <td colspan="2">Talisman</td>
-          </tr>
-          <tr>
-            <th scope="row">B2</th>
-            <td colspan="2">Remember</td>
-          </tr>
-          <tr>
-            <th scope="row">B3</th>
-            <td colspan="2">You Make It Easy</td>
-          </tr>
-          <tr>
-            <th scope="row">B4</th>
-            <td colspan="2">Ce matin La</td>
-          </tr>
-          <tr>
-            <th scope="row">B5</th>
-            <td colspan="2">New Star In The Sky</td>
-          </tr>
-          <tr>
-            <th scope="row">B6</th>
-            <td colspan="2">Le Voyage De Penelope</td>
-          </tr>
+            <td><%= @wrapper.get_release("240536").tracklist[0].title %></td>
+            <td><%= @wrapper.get_release("240536").tracklist[0].duration %></td>
         </tbody>
       </table>
       <br>
