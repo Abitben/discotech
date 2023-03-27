@@ -1,0 +1,45 @@
+  <p>
+    <strong>Titre:</strong>
+    <%= copy.album.title %>
+  </p>
+
+  <p>
+    <strong>Artist:</strong>
+    <%= copy.album.artist %>
+  </p>
+
+  <p>
+    <strong>year:</strong>
+    <%= copy.album.year %>
+  </p>
+
+
+  <p>
+    <strong>Lien vers la fiche: <%= copy.album.release_id%> </strong>
+    <%# <%= link_to "Plus d'info", release_path(@release.id) %>
+  </p>
+
+  <p>
+    <strong>Etat de la couverture:</strong>
+    <%= copy.sleeve_condtion %>
+  </p>
+
+   <p>
+    <strong>Etat de la couverture:</strong>
+    <%= copy.media_condtion %>
+  </p>
+
+  <p>
+    <strong>Etat de la couverture:</strong>
+    <%= ad.copy.sleeve_condition %>
+  </p>
+
+  <p>
+        <%= link_to "Show this ad", copy %>
+  </p>
+
+  <p>
+    <%= link_to "Edit this copy", edit_copy_path(copy) %> |
+  <%= link_to "Back to collection", copies_path %>
+
+  </p>

@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get 'copies/index'
-  get 'copies/show'
-  get 'copies/edit'
-  get 'copies/create'
-  get 'copies/update'
-  get 'copies/destroy'
+  resources :copies, only: [:index, :show, :create, :show, :edit, :update, :destroy]
   resources :ads
   get '/', to:'home#index', as: 'root'
   get '/KitUI', to: 'demo#show'
