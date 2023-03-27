@@ -1,4 +1,4 @@
-class CreateCollections < ActiveRecord::Migration[7.0]
+class CreateCopies < ActiveRecord::Migration[7.0]
   def change
     create_table :copies do |t|
       t.references :album, null: false, foreign_key: true
