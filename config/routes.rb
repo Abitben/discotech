@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'wishlist/index'
   resources :copies, only: [:index, :show, :create, :show, :edit, :update, :destroy]
   resources :ads
   get '/', to:'home#index', as: 'root'

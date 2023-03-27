@@ -1,0 +1,13 @@
+    
+<tr>
+  <td><%= owned.album.release_id %> </th>
+  <td><%= owned.album.title %> </td>
+  <td><%= owned.album.artist %> </td>
+  <td><%= owned.album.year %> </td>
+  <td> à completer avec le lien vers la release </td>
+  <td><%= owned.sleeve_condition %> </td>
+  <td><%= owned.media_condition %>  </td>
+  <td><%= link_to "Modifier", edit_copy_path(owned), class: 'btn btn-warning' %> 
+  <%= button_to "Supprimer", copy_path(owned), method: :delete, class: 'btn btn-danger' %>
+  </td>
+</tr>

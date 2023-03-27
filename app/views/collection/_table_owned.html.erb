@@ -1,0 +1,17 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"> Titre </th>
+      <th scope="col"> Artist </th>
+      <th scope="col"> Year </th>
+      <th scope="col"> Plus d'info sur l'album </th>
+      <th scope="col"> Etat de la pochette </th>
+      <th scope="col"> Etat du CD </th>
+      <th scope="col"> Modifier/supprimer </th>
+    </tr>
+  </thead>
+  <tbody>
+      <%= render partial: "collection/owned", collection: @owned %>
+  </tbody>
+</table>
