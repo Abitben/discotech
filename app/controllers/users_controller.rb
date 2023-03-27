@@ -13,9 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     @albums = @user.albums
-    puts '***********'
-    puts verify_user?
-    puts '***********'
+    @orders = Order.where(user_id: @user.id)
   end
 
   # GET /users/new
