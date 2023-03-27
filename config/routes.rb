@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :wishlist, only: [:index]
     resources :collection, only: [:index]
+    resources :orders, only: [:index]
   end
 
   get 'carts/:id' => "carts#show", as: "cart"
