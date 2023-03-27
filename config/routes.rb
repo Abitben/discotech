@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :ads
   get '/', to:'home#index', as: 'root'
   get '/KitUI', to: 'demo#show'
-  get 'demo/show'
   resources :albums
   devise_for :users
   resources :users do
