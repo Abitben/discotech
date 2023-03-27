@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :set_user, only: %i[ show edit update destroy ]
+  # before_action :is_admin?, only: %i[ index ]
+  # before_action :verify_user?, only: %i[ show edit update destroy ]
+
 
   # GET /users or /users.json
   def index
@@ -9,6 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     @albums = @user.albums
+    @orders = Order.where(user_id: @user.id)
   end
 
   # GET /users/new
