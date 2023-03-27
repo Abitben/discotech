@@ -1,5 +1,5 @@
 class Copy < ApplicationRecord
-  enum :status, { whished: 0, owned: 1}
+  enum :status, { wished: 0, owned: 1}
   enum :sleeve_condition, { Neuf: 0,
     Comme_neuf: 1,
     Très_bon_état: 2,
