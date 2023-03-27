@@ -1,4 +1,3 @@
-<div id="<%= dom_id ad %>">
   <p>
     <strong>Price:</strong>
     <%= ad.price %>
@@ -19,4 +18,19 @@
     <%= ad.copy_id %>
   </p>
 
-</div>
+  <p>
+    <strong>Etat de la couverture:</strong>
+    <%= ad.copy.sleeve_condition %>
+  </p>
+
+  <p>
+        <%= link_to "Show this ad", ad %>
+  </p>
+
+  <p>
+
+    <%= link_to "Edit this ad", edit_ad_path(ad) %> |
+  <%= link_to "Back to ads", ads_path %>
+
+  </p>
+

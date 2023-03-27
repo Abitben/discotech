@@ -3,12 +3,7 @@
 <h1>Ads</h1>
 
 <div id="ads">
-  <% @ads.each do |ad| %>
-    <%= render ad %>
-    <p>
-      <%= link_to "Show this ad", ad %>
-    </p>
-  <% end %>
+  <%= render partial: 'ads/ad', layout: 'shared/card_layout', collection: @ads %>
 </div>
 
 <%= link_to "New ad", new_ad_path %>
