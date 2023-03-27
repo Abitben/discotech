@@ -22,13 +22,11 @@
     <strong>Etat de la couverture:</strong>
     <%= ad.copy.sleeve_condition %>
   </p>
-
-  <p>
         <%= link_to "Show this ad", ad %>
   </p>
 
   <p>
-    <%= render 'shared/add_to_cart' %>
+    <%= render partial: 'shared/add_to_cart', locals: {ad: ad} %>
     <%= link_to "Edit this ad", edit_ad_path(ad) %> |
   <%= link_to "Back to ads", ads_path %>
 
