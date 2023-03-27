@@ -18,7 +18,6 @@ wrapper = Discogs::Wrapper.new("Test OAuth", user_token: "paamjOrFUPostpOgjjwwmr
       title: release.title,
       artist: release.artists[0].name,
       year: release.year,
-      price: Faker::Commerce.price(range: 0..50.0, as_string: true)
     )
   end
 end
@@ -51,37 +50,48 @@ puts "user is okay"
   Copy.create!(
     album_id: Album.all.sample.id,
     user_id: User.all.sample.id,
-    sleeve_condition: "okay",
-    media_condition: "okay",
+    sleeve_condition: rand(1..9),
+    media_condition: rand(1..9),
     status: rand(0..1),
   )
 end
 puts "copy is okay"
 
-# # seed for carts table
-# 10.times do
-#   Cart.create!(
-#   )
-# end
-# puts "cart is okay"
+
+10.times do
+  Ad.create!(
+    price: Faker::Number.decimal(l_digits: 7, r_digits: 2),
+    description: Faker::Lorem.sentence(word_count: 10),
+    status: rand(1..3),
+    copy_id: Copy.all.sample.id
+)
+end
+puts 'ad is okay'
+
+# seed for carts table
+10.times do
+  Cart.create!(
+  )
+end
+puts "cart is okay"
+
+# seed for cartlines table
+10.times do
+  Cartline.create!(
+    album_id: Album.all.sample.id,
+    cart_id: Cart.all.sample.id,
+  )
+end
+puts "cartline is okay"
 
 
 
-# # seed for orders table
-# 10.times do
-#   Order.create!(
-#     user_id: User.all.sample.id,
-#     cart_id: Cart.all.sample.id,
-#   )
-# end
-# puts "order is okay"
-
-# # seed for cartlines table
-# 10.times do
-#   Cartline.create!(
-#     album_id: Album.all.sample.id,
-#     cart_id: Cart.all.sample.id,
-#   )
-# end
-# puts "cartline is okay"
+# seed for orders table
+10.times do
+  Order.create!(
+    user_id: User.all.sample.id,
+    cart_id: Cart.all.sample.id,
+  )
+end
+puts "order is okay"
 
