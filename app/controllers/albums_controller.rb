@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums or /albums.json
   def index
-    @albums = Album.all
+    @albums = Album.all.page(params[:page])
   end
 
   # GET /albums/1 or /albums/1.json
