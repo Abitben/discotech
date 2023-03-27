@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get 'cartlines/:id' => "cartlines#show", as: "cartline"
   delete 'cartlines/:id' => "cartlines#destroy", as: 'cartline_destroy'
 
+  get 'releases' => 'releases#show'
+  get 'releases' => 'releases#index'
+
   # Stripe routes
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
