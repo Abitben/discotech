@@ -1,4 +1,4 @@
-class Collection < ApplicationRecord
+class Copy < ApplicationRecord
   enum :status, { whished: 0, owned: 1}
   
   
