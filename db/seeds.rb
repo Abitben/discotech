@@ -25,12 +25,6 @@ end
 
 puts "album is okay"
 
-# seed for carts table
-10.times do
-  Cart.create!(
-  )
-end
-puts "cart is okay"
 
 # seed for users table
 10.times do
@@ -51,29 +45,40 @@ User.create(email: "admin@discotech", password: "admins", is_admin: true)
 puts "user is okay"
 
 
-# seed for orders table
-10.times do
-  Order.create!(
-    user_id: User.all.sample.id,
-    cart_id: Cart.all.sample.id,
-  )
-end
-puts "order is okay"
-
-# seed for cartlines table
-10.times do
-  Cartline.create!(
-    album_id: Album.all.sample.id,
-    cart_id: Cart.all.sample.id,
-  )
-end
-puts "cartline is okay"
 
 # seed for collections table
 10.times do
-  Collection.create!(
+  Copy.create!(
     album_id: Album.all.sample.id,
     user_id: User.all.sample.id,
   )
 end
-puts "collection is okay"
+puts "copy is okay"
+
+# # seed for carts table
+# 10.times do
+#   Cart.create!(
+#   )
+# end
+# puts "cart is okay"
+
+
+
+# # seed for orders table
+# 10.times do
+#   Order.create!(
+#     user_id: User.all.sample.id,
+#     cart_id: Cart.all.sample.id,
+#   )
+# end
+# puts "order is okay"
+
+# # seed for cartlines table
+# 10.times do
+#   Cartline.create!(
+#     album_id: Album.all.sample.id,
+#     cart_id: Cart.all.sample.id,
+#   )
+# end
+# puts "cartline is okay"
+
