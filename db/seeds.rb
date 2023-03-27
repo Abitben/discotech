@@ -60,7 +60,7 @@ puts "copy is okay"
 
 10.times do
   Ad.create!(
-    price: Faker::Number.decimal(l_digits: 7, r_digits: 2),
+    price: Faker::Commerce.price(range: 0..9000.00, as_string: true),
     description: Faker::Lorem.sentence(word_count: 10),
     status: rand(1..3),
     copy_id: Copy.all.sample.id
@@ -78,7 +78,7 @@ puts "cart is okay"
 # seed for cartlines table
 10.times do
   Cartline.create!(
-    album_id: Album.all.sample.id,
+    ad_id: Ad.all.sample.id,
     cart_id: Cart.all.sample.id,
   )
 end
