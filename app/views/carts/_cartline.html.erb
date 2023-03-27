@@ -1,3 +1,4 @@
-<%= render partial: 'albums/album', locals: {album: cartline.ad.copy } %>
+<%= render partial: 'copies/copy', locals: {copy: cartline.ad.copy } %>
+<h3> Prix de l'album : <%= cartline.ad.price %>€ </h3>
 
 <%= button_to "Remove item", cartline_destroy_path(cartline.id), method: :delete, class: 'btn btn-danger' %>

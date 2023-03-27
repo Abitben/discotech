@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-    @albums = @user.albums
+    @collection = Copy.where(user_id: params[:id])
     @orders = Order.where(user_id: @user.id)
   end
 

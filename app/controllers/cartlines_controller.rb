@@ -27,7 +27,8 @@ end
     redirect_to cart_path(@current_cart)
   end  
   
-private
+    private
+    
     def cartline_params
         params.require(:cartline).permit(:ad_id, :cart_id)
     end
