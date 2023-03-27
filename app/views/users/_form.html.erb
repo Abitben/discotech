@@ -44,6 +44,9 @@
         <%= form.submit class: 'btn btn-form' %>
       </div>
     </div>
+    <div class= ''>
+      <h3>Changer d'avatar ?</h3>
+    </div>
   <% end %>
   <div class= 'col-sm-3'>
     <div>
@@ -51,3 +54,7 @@
     </div>
   </div>
 </div>
+<%= form_tag user_avatars_path(@user), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>

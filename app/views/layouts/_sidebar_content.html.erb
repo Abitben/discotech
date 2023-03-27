@@ -1,3 +1,9 @@
+<%if current_user.avatar.attached?%>
+  <%= image_tag(current_user.avatar) %>
+  #Put variant thumb resize
+<% else %>
+  <p> No avatar </p>
+<% end %>
 <li class="nav-item-sidebar dropdown-item">
   <i class="bi bi-person-circle"></i>
   <a href= "<%=user_path(current_user.id)%>">Mon profil</a>
