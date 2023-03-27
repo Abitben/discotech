@@ -1,0 +1,95 @@
+
+/*buttons*/
+
+.btn{
+  border: none;
+  border-color: #000000;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.80);
+  border-radius: 20px;
+  min-width: 50px;
+  max-width: 200px;
+  box-shadow: #000000;
+}
+
+.btn:hover{
+  color: #ffffff;
+  background-color: var(--bs-grey-logo);
+  border-color: none;
+}
+
+.btn-form{
+  border-color: var(--bs-yellow-btn);
+  background-color:var(--bs-yellow-btn) ;
+  color: var (--bs-yellow-btn-hover);
+}
+
+.btn-search{
+  border-color: var(--bs-gray-green-logo);
+  background-color:var(--bs-gray-green-logo) ;
+  color: var(--bs-regular-white);
+}
+
+.btn-search-alt{
+  border-color: var(--bs-grey-logo);
+}
+
+.btn-form:hover{
+  background-color: var(--bs-yellow-btn-hover);
+  border-color: var(--bs-grey-logo);
+  color: black;
+}
+
+.btn-info:hover{
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
+  color: var(--bs-regular-white);
+}
+
+.btn-sb:hover{
+  background-color: var(--bs-buy-sell);
+  border-color: var(--bs-buy-sell);
+  color: var(--bs-regular-white);
+}
+
+.btn-login:hover {
+  background-color: var(--bs-yellow-btn-hover);
+  color: var(--bs-grey-logo);
+}
+
+.btn-cart {
+  padding: var(--space-s);
+  margin: var(--space-xs)
+}
+
+.btn-cart:hover {
+  background-color: #D9B8C2;
+  color: black
+}
+
+.btn-danger{
+  color: black;
+}
+
+.btn-danger:hover{
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
+}
+
+.btn-warning{
+  color: black;
+}
+
+.btn-warning:hover{
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
+.btn-success {
+  color: black;
+}
+
+.btn-success:hover{
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}  

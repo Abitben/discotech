@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "Logo_Discotech_horiz_blue.png", size: "170x34" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <%= link_to albums_path, class: "navbar-brand" do %>
+          <%= image_tag "Logo_Discotech_horiz_blue.png", size: "170x34" %>
+        <% end %>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto align-items-center justify-content-center">
+          <form class="d-flex p-2">
+            <div class="input-group p-5">
+              <input type="text" class="form-control" placeholder="Rechercher des artistes, des albums, des genres ..." aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-search" type="button" id="button-addon2">Search</button>
+            </div>
+          </form>
+          <% if user_signed_in? %>
+          <li class="nav-item dropdown under-992px">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon espace</a>
+            <ul class="dropdown-menu">
+            <%= render partial: "layouts/sidebar_content"%>
+            </ul>
+          </li>
+          <%end%>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Explorer</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marketplace</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Communauté</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+        <div class='nav-end navbar-nav align-items-center m-5'>
+          <li class="nav-item cart-icon-cont p-2">
+          <%= link_to (cart_path(@current_cart)) do %>
+             <i class="bi bi-cart-fill"></i>
+          <%end%>
+          </li>
+          <li class="nav-item dropdown">
+            <% if user_signed_in? %>
+              <li>
+                <%= button_to "Log out", destroy_user_session_path, class:"btn btn-warning", method: :delete %>
+              </li>
+            <% else %>
+            </li>
+            <li class="nav-item dropdown justify-content-center">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+              <div class="dropdown-menu">
+                <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-form justify-items-center' %><br/>
+                <%= link_to "Log in", new_user_session_path, class: "btn-login dropdown-item " %>
+              </div>
+            <% end %>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

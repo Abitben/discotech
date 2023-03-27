@@ -10,6 +10,19 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ *= require bootstrap.min
+ *= require main
+ *= require accordion
+*= require albums
+*= require buttons
+*= require cards
+*= require colors
+*= require footer
+*= require forms
+*= require icons
+*= require navbar
+*= require carousel
+*= require sidebar
  */
+
+@import 'sliders'

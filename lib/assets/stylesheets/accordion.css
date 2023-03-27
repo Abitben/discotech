@@ -1,0 +1,60 @@
+.myaccordion {
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+}
+
+.myactive, .myaccordion:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.myaccordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  border-bottom-right-radius: 0px;
+}
+
+.myactive:after {
+  content: "\2212";
+}
+
+.mypanel {
+  position: relative;
+  width: 100%;
+  padding: 0 18px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(15px);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 576px) {
+  .myaccordion, .mypanel {
+    max-width: 300px;
+  }
+}
+
+.mypanel li {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+

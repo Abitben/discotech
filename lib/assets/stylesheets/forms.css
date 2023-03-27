@@ -1,0 +1,28 @@
+
+/*forms*/
+
+/* input */
+
+.input-group {
+  max-width: 500px;
+}
+
+.form-control{
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 50px ;
+  border-radius: 20px;
+  max-width: 500px;
+  border-color: var(--bs-dark-purple);
+}
+
+select{
+  padding: 5px;
+  border-radius: 20px;
+  border-color: var(--bs-dark-purple);
+  background-color: white;
+}
+
+textarea{
+  border-radius: 20px;
+  border-color: var(--bs-dark-purple);
+}
