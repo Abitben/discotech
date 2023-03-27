@@ -1,0 +1,7 @@
+<% if controller_name == "albums" && action_name == "index" %>
+<%= button_to "Add to cart", cartlines_path(:album_id => album.id), class: 'btn btn-cart' %>
+<% end %>
+<span class ="btn btn-marketplace">
+<i class = "bi-cart-fill icon-marketplace"></i>
+<%= link_to "Marketplace", root_path %>
+</span>

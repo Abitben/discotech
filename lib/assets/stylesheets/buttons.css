@@ -59,7 +59,7 @@
 
 .btn-cart {
   padding: var(--space-s);
-  margin: var(--space-xs)
+  margin: var(--space-xs);
 }
 
 .btn-cart:hover {
@@ -93,3 +93,7 @@
   background-color: var(--bs-success);
   border-color: var(--bs-success);
 }  
+
+.btn-marketplace {
+  color: black
+}
