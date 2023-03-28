@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   before_action :is_admin?, only: %i[ index ]
   before_action :verify_user?, only: %i[ show edit update destroy ]
 
-
   # GET /users or /users.json
   def index
     @users = User.all.page(params[:page])
