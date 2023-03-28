@@ -14,4 +14,7 @@ i{
   color: var(--bs-black);
 }
 
-
+.icon-marketplace{
+  color: black;
+  text-decoration: none;
+}
