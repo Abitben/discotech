@@ -1,5 +1,4 @@
 <h2>Album details</h2>
-<% @release = @wrapper.get_release(rand(1..10000)) %>
 <%= image_tag(@release.images[0].uri, :size => "200x200") %>
 <p><strong>Nom</strong> : <%= @release.artists[0].name %></p>
 <p><strong>Titre album</strong> : <%= @release.title %></p>

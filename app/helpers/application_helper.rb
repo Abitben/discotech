@@ -19,7 +19,7 @@ module ApplicationHelper
 
   def get_non_empty_release
     release = nil
-    while release.nil? || release.empty?
+    while release.nil? || release.empty? || release.images.nil?
       release = @wrapper.get_release(rand(1..10000))
     end
     return release
