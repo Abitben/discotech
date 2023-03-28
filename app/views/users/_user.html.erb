@@ -1,50 +1,40 @@
 <div id="<%= dom_id user %>">
   <p>
-    <strong>First name:</strong>
+    <strong>Prénom :</strong>
     <%= user.first_name %>
   </p>
-
   <p>
-    <strong>Last name:</strong>
+    <strong>Nom :</strong>
     <%= user.last_name %>
   </p>
-
   <p>
-    <strong>Address:</strong>
+    <strong>Adresse :</strong>
     <%= user.address %>
   </p>
-
   <p>
-    <strong>Zip code:</strong>
+    <strong>Code Postal :</strong>
     <%= user.zip_code %>
   </p>
-
   <p>
-    <strong>City name:</strong>
+    <strong>Ville :</strong>
     <%= user.city_name %>
   </p>
-
   <p>
-    <strong>Country:</strong>
+    <strong>Pays :</strong>
     <%= user.country %>
   </p>
-
   <p>
-    <strong>Phone:</strong>
+    <strong>Téléphone :</strong>
     <%= user.phone %>
   </p>
-
-<%= %>
-
+  <%= %>
   <p>
-      <%= link_to "Show this user", user, class: 'btn btn-info' %>
-    </p>
-
+    <%= link_to "Profil de l'utilisateur", user, class: 'btn btn-info' %>
+  </p>
   <hr>
   <div>
-  <%= link_to "Edit this user", edit_user_path(user), class: 'btn btn-form' %> 
-  <%= link_to "Back to users", users_path, class: 'btn' %>
-  <%= button_to "Destroy this user", user, method: :delete, class: 'btn btn-danger' %>
-</div>
-
+    <%= link_to "Editer les informations", edit_user_path(user), class: 'btn btn-form' %>
+    <%= link_to "Tous les utilisateurs", users_path, class: 'btn' %>
+    <%= button_to "Supprimer l'utilisateur", user, method: :delete, class: 'btn btn-danger' %>
+  </div>
 </div>
