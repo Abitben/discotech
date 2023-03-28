@@ -1,4 +1,4 @@
-<% if controller_name == "albums" && action_name == "index" %>
+<% if controller_name == "albums"  %>
 <%= button_to "Ajouter au panier", cartlines_path(:album_id => album.id), class: 'btn btn-cart' %>
 <% end %>
 <span class ="btn btn-marketplace">
