@@ -13,8 +13,6 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     user_copies = Copy.where(user_id: params[:id])
-    @collection = user_copies.owned
-    @orders = Order.where(user_id: @user.id)
   end
 
   # GET /users/new

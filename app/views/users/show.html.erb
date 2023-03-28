@@ -1,15 +1,3 @@
 <p style="color: green"><%= notice %></p>
-<div class="row">
-  <div class="col-sm-3">
     <h1> Your Profile </h1>
     <%= render partial: "users/user", layout: "shared/card_layout", locals: {user: @user} %>
-  </div>
-  <div class="col-sm-8">
-    <h1> Your Collection : <%=@collection.count%> </h1>
-    <%= render partial: "copies/copy", layout: "shared/card_layout", collection: @collection, spacer_template: 'shared/divider' %>
-
-    <h1> Your Past Orders </h1>
-    <%= render partial: 'orders/order', collection: @orders, layout: "shared/card_layout", spacer_template: 'shared/divider'  %>
-
-  </div>
-</div>
