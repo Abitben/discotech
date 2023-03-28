@@ -41,7 +41,6 @@ class UsersController < ApplicationController
         redirect_to user_url(@user), notice: "User was successfully updated." 
       else
         render :edit, status: :unprocessable_entity 
-        render json: @user.errors, status: :unprocessable_entity 
       end
   end
 
