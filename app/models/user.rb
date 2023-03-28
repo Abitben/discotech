@@ -1,13 +1,18 @@
 class User < ApplicationRecord
+  paginates_per 10
+  
   has_one_attached :avatar #do |attachable|
     #attachable.variant :thumb, resize_to_limit: [100, 100]
   #end
+  
   # after_create :welcome_send
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

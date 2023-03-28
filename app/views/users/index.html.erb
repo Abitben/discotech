@@ -13,4 +13,5 @@
     <%= render partial: 'users/user', layout: 'shared/card_layout', locals: {user: user} %>
     <%= render partial: 'shared/divider'%>
   <% end %>
+  <%= paginate @users%>
 </div>
