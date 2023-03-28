@@ -1,7 +1,7 @@
 <%= form_with(model: album) do |form| %>
   <% if album.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+      <h2><%= pluralize(album.errors.count, "error") %> Interdit la sauvegarde de cet album :</h2>
 
       <ul>
         <% album.errors.each do |error| %>
@@ -12,23 +12,23 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :titre, style: "display: block" %>
+    <%= form.text_field :titre %>
   </div>
 
   <div>
-    <%= form.label :artist, style: "display: block" %>
-    <%= form.text_field :artist %>
+    <%= form.label :artiste, style: "display: block" %>
+    <%= form.text_field :artiste %>
   </div>
 
   <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.number_field :year %>
+    <%= form.label :année, style: "display: block" %>
+    <%= form.number_field :année %>
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
+    <%= form.label :prix, style: "display: block" %>
+    <%= form.text_field :prix %>
   </div>
 
   <div>

@@ -1,5 +1,5 @@
-<h3>Sub total: <%= number_to_currency(cart.sub_total) %></h3>
-<%= button_to "Payment", checkout_create_path(total: cart.sub_total), class: "btn btn-primary", remote: true, class: "btn btn-success", "data-turbo" => "false" %>
+<h3>Total : <%= number_to_currency(cart.sub_total) %></h3>
+<%= button_to "Paiement", checkout_create_path(total: cart.sub_total), class: "btn btn-primary", remote: true, class: "btn btn-success", "data-turbo" => "false" %>
 <br>
 <hr>
-<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-warning' %>
+<%= link_to "Vider le panier", cart_path(@current_cart),method: :delete, data: {confirm: "Êtes-vous sur ?"}, class: 'btn btn-warning' %>
