@@ -1,8 +1,7 @@
-<div class = "row">
-<div class = "col-sm-3 col-md-5">
-
+<div class = "row" data-turbo="false">
+  <div class = "col-sm-3 col-md-5">
     <%= render partial: "shared/cover", locals: {album: album} %>
-    <%= render partial: "albums/add_to_cart", locals: {album: album} %>
+    <%= render partial: "shared/add_to_cart", locals: {album: album} %>
     <%= link_to "Retour aux albums", albums_path, class: 'btn btn-cart' %>
   </div>
   <div class="col-sm-4">
@@ -10,34 +9,34 @@
       <h3 class="card-title"> <%= album.title %></h3>
       <h5 class="card-title">  <%= album.artist %> - <%= album.year %></h5>
       <h4 class="card-title"> <strong>$ <%= album.price %></strong></h4>
-      </div>
-      <div class ="card-body">
+    </div>
+    <div class ="card-body">
       <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
       <h6 class ="card-text"> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
       <h6 class ="card-text"> <strong>Pays </strong>: US </h6>
       <h6 class ="card-text"> <strong>Sortie</strong> : févr. 2023 </h6>
       <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
       <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
-      </div>
+    </div>
   </div>
   <% if controller_name == "albums" && action_name == "show" %>
-  <div class="col-sm-3">
-    <button class="myaccordion">Labels</button>
-    <div class="mypanel">
-      <br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br>
+    <div class="col-sm-3">
+      <button class="myaccordion">Labels</button>
+      <div class="mypanel">
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+      </div>
     </div>
-  </div>
   <% end %>
-    <% if controller_name == "albums" && action_name == "index" %>
-  <div class="col-sm-3">
-    <button class="myaccordion">Seller</button>
-    <div class="mypanel">
-      <br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br>
+  <% if controller_name == "albums" && action_name == "index" %>
+    <div class="col-sm-3">
+      <button class="myaccordion">Seller</button>
+      <div class="mypanel">
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+      </div>
     </div>
-  </div>
   <% end %>
 </div>

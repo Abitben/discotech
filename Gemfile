@@ -83,3 +83,5 @@ gem "rspec-rails", "~> 6.0"
 gem "dotenv", "~> 2.8"
 gem "discogs-wrapper", "~> 2.5"
 gem 'kaminari'
+gem "mini_magick"
+gem "image_processing", "~> 1.0"

@@ -1,0 +1,16 @@
+<h2>Album details</h2>
+<%= image_tag(@release.images[0].uri, :size => "200x200") %>
+<p><strong>Nom</strong> : <%= @release.artists[0].name %></p>
+<p><strong>Titre album</strong> : <%= @release.title %></p>
+<p><strong>Label</strong> : <%= @release.labels[0].name %></p>
+<p><strong>Pays</strong> : <%= @release.country %></p>
+<p><strong>Date sortie</strong> : <%= @release.year %></p>
+<p><strong>Genre</strong> : <%= @release.genres[0] %></p>
+<p><strong>Style</strong> : <%= @release.styles[0] %></p>
+
+
+<div class ="d-flex justify-content-around">
+<%= render partial: "shared/collection_button" %>
+<%= render partial: "shared/wishlist_button" %>
+<%= render partial: "shared/add_to_cart" %>
+</div>

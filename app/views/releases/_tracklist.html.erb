@@ -1,0 +1,26 @@
+
+<div class="col-sm-4">
+  <button class="myaccordion">Tracklist</button>
+  <div class="mypanel">
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Track</th>
+          <th scope="col">Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @release.tracklist.each do |track| %>
+          <tr>
+            <td><%= track.position %></td>
+            <td><%= track.title %></td>
+            <td><%= track.duration %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+  </div>
+</div>
