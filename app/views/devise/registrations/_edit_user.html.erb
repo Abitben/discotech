@@ -15,7 +15,7 @@
         <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
       </div>
       <div class="field mt-4">
-        <%= f.label :password %> <strong>(laisser vide si vous ne souhaitez pas changer)</strong><br />
+        <%= f.label :password %> <strong>(laisser vide si vous ne souhaitez pas le changer)</strong><br />
         <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
         <% if @minimum_password_length %>
           <em><%= @minimum_password_length %> caractères minimum</em>
