@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @release = @wrapper.get_release(params[:id])
+    @albums = Album.all
+    @album_best_seller = Album.all.sample
+    @best_sell = Album.all.sample
   end
 end

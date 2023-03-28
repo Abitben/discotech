@@ -1,10 +1,6 @@
 <h2>Meilleure vente</h2>
 <% @release = get_non_empty_release %>
-<%= render partial: 'shared/cover', locals: {release: @release} %>
-<p><strong>Titre de l'album</strong> : <%= @release.title %></p>
-<p><strong>Artist</strong> : <%= @release.artists[0].name %></p>
-<p><strong>Label</strong> : <%= @release.labels[0].name %></p>
-<p><strong>Pays</strong> : <%= @release.country %></p>
-<p><strong>Date de sortie</strong> : <%= @release.year %></p>
-<p><strong>Genre</strong> : <%= @release.genres[0] %></p>
-<p><strong>Style</strong> : <%= @release.styles[0] %></p>
+<%= render partial: 'shared/cover', locals: {album: @best_sell} %>
+<p><strong>Artiste :</strong>  <%= album.artist%></p>
+<p><strong>Titre de l'album</strong> : <%= album.title %></p>
+<p><strong>Date sortie</strong> : <%= album.year %></p>

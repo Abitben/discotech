@@ -1,6 +1,6 @@
 <div class = "row" data-turbo="false">
   <div class = "col-sm-3 col-md-5">
-    <%= image_tag(get_non_empty_release.images[0].uri, :size => "200x200") %>
+    <%= image_tag(album.image_url, :size => "200x200") %>
     <%= render partial: "shared/add_to_cart", locals: {album: album} %>
     <%= link_to "Retour aux albums", albums_path, class: 'btn' %>
     <%= link_to "Plus d'info", album_path(album), class: 'btn btn-info mt-2'%>
