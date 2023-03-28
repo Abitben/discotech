@@ -86,7 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_122644) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "address"
+    t.text "address"
     t.string "zip_code"
     t.string "city_name"
     t.string "country"

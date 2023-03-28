@@ -1,13 +1,12 @@
-  
-<% if action_name == "show" || action_name == "index" %>
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-      </div>
-      <div class="flip-card-back flip-card-back-image text-center align-items-center justify-content-center d-flex">
-        <%= link_to "Plus d'info", album_path(album), class: 'btn btn-info d-flex justify-content-center align-items-center'%>
-      </div>
+<div class="flip-card text-center">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <%= image_tag(release.images[0].uri, :size => "200x200") %>
+    </div>
+    <div class="flip-card-back flip-card-back-image">
+      <h5 class="mt-5"><%= release.title %></h5>
+      <h6><%= release.artists[0].name %></h6>
+      <p><%= link_to "Plus d'info", release_path(@release.id), class: 'btn btn-info mt-2'%></p>
     </div>
   </div>
-<% end %>
+</div>

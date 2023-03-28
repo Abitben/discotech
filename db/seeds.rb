@@ -33,7 +33,7 @@ end
 puts "cart is okay"
 
 # seed for users table
-100.times do
+10.times do
   User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -43,11 +43,11 @@ puts "cart is okay"
     country: Faker::Address.country,
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.unique.email,
-    password: Faker::Internet.password(min_length: 8),
+    password: Faker::Internet.password(min_length: 6, max_length: 20, mix_case: true, special_characters: true) + "#{rand(1..50)}"
   )
 end
 
-User.create(email: "admin@discotech", password: "admins", is_admin: true)
+User.create(email: "admin@discotech.com", password: "Admin@THPforUser75", is_admin: true)
 puts "user is okay"
 
 
