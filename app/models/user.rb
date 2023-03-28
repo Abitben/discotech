@@ -21,6 +21,16 @@ class User < ApplicationRecord
 
   has_many :orders
 
+  validate :password_complexity
+
+  def password_complexity
+    # Regexp extracted from https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
+    return if password.blank? || password =~ /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
+
+    errors.add :password, 'Complexity requirement not met. Please use: 1 uppercase, 1 lowercase, 1 digit and 1 special character'
+  end
+
+
  # validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
  # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
 end
