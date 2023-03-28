@@ -15,6 +15,8 @@ wrapper = Discogs::Wrapper.new("Test OAuth", user_token: "paamjOrFUPostpOgjjwwmr
  release = wrapper.get_release(rand(1..10000))
   unless release.message == 'Release not found.'
     Album.create!(
+      release_id: release.id,
+      release_id: release.images[0].uri,
       title: release.title,
       artist: release.artists[0].name,
       year: release.year,
