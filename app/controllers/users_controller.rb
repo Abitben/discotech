@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
-      if @user.update(user_params)
+      if @user.update!(user_params)
         redirect_to user_url(@user), notice: "Utilisateur édité avec succès." 
       else
         render :edit, status: :unprocessable_entity 
@@ -57,6 +57,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :address, :zip_code, :city_name, :country, :phone)
+      params.require(:user).permit(:first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, :avatar)
     end
 end
