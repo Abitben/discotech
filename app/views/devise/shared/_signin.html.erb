@@ -16,21 +16,23 @@
     <div class="actions field mt-4 mb-4">
       <div class= "row">
         <div class= "col-sm-6">
-            <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: 'btn' %><br />
+          <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: 'btn' %><br />
         </div>
         <div class= "col-sm-3">
-            <%= f.submit "Se connecter", class: "btn btn-login" %>
-          </div>
+          <%= f.submit "Se connecter", class: "btn btn-login" %>
         </div>
-      <% end %>
       </div>
     <% end %>
-    <hr class>
-    <div class="row mt-4">
-      <div class= "col-sm-6">
-        <h4> Pas encore inscrit ?</h4>
-      </div>
-      <div class= "col-sm-3">
-        <%= link_to "Créer un compte", new_registration_path(resource_name), class: 'btn btn-form' %><br />
-      </div>
+  </div>
+<% end %>
+<% unless controller_name == 'home' %>
+  <hr class>
+  <div class="row mt-4">
+    <div class= "col-sm-6">
+      <h4> Pas encore inscrit ?</h4>
     </div>
+    <div class= "col-sm-3">
+      <%= link_to "Créer un compte", new_registration_path(resource_name), class: 'btn btn-form' %><br />
+    </div>
+  </div>
+<%end%>
