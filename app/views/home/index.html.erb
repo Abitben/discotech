@@ -7,9 +7,17 @@
       <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
     </div>
     <div class= "col-6">
-    <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
+      <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
     </div>
   </div>
 </div>
-<br>
-<br>
+
+<div class="container">
+  <div class='row'>
+    <% @albums.each do |album| %>
+      <div class= 'col'>
+        <%= render partial: 'shared/cover', locals: {album: album} %>
+      </div>
+    <%end%>
+  </div>
+</div>
