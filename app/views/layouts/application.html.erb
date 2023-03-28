@@ -14,12 +14,12 @@
   <body>
     <%= render 'layouts/navbar'%>
     <% if user_signed_in? %>
-    <div class='row'>
-      <div class='col-lg-2 sidebar-col hidden-lg'>
+      <div class='row'>
+        <div class='col-lg-2 sidebar-col hidden-lg'>
           <%= render partial: 'layouts/sidebar' %>
-      </div>
-      <div class='col-8' >
-      <%end%>
+        </div>
+        <div class='col-8'>
+        <%end%>
         <div class="container" data-turbo="false">
           <%= yield %>
         </div>
