@@ -1,6 +1,6 @@
 <h2>Vendeur à la une</h2>
 <% @release = get_non_empty_release %>
-<%= image_tag(@release.images[0].uri, :size => "200x200") %>
+<%= render partial: 'shared/cover', locals: {release: @release} %>
 <p><strong>Nom</strong> : <%= @release.artists[0].name %></p>
 <p><strong>Titre album</strong> : <%= @release.title %></p>
 <p><strong>Label</strong> : <%= @release.labels[0].name %></p>

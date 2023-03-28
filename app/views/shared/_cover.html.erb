@@ -4,10 +4,10 @@
     <div class="flip-card-front">
       <%= image_tag(release.images[0].uri, :size => "200x200") %>
     </div>
-    <div class="flip-card-back flip-card-back-image text-center align-items-center justify-content-center d-flex">
+    <div class="flip-card-back flip-card-back-image">
       <h3><%= release.title %></h3>
       <h3><%= release.artists[0].name %></h3>
-      <%= link_to "Plus d'info", release_path(@release), class: 'btn btn-info d-flex justify-content-center align-items-center'%>
+      <p><%= link_to "Plus d'info", release_path(@release.id), class: 'btn btn-info d-flex justify-content-center align-items-center'%><p>
     </div>
   </div>
 </div>

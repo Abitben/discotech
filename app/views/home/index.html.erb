@@ -11,95 +11,6 @@
     </div>
   </div>
 </div>
-<div class="card-index">
-  <div class="container">
-    <div class="row d-flex justify-content-between">
-      <div class="card-home">
-        <h2>Meilleur vente</h2>
-        <div class="row g-0">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-              </div>
-              <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                <br>
-                <h2>Air</h2>
-                <h2>Moon Safari</h2>
-                <p>Architect &amp; Engineer</p>
-                <p>We love that guy</p>
-                <a href="#" class="btn btn-info">More info</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-7">
-            <div class="card-body">
-              <h3 class="card-title"> Moon Safari</h3>
-              <h5> Air - 1998</h5>
-              <p class="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <%# seconde card %>
-      <div class="card-home">
-        <h2>Vendeur à la une</h2>
-        <div class="row g-0">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-              </div>
-              <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                <br>
-                <h2>Air</h2>
-                <h2>Moon Safari</h2>
-                <p>Architect &amp; Engineer</p>
-                <p>We love that guy</p>
-                <a href="#" class="btn btn-info">More info</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-7">
-            <div class="card-body">
-              <h3 class="card-title"> Moon Safari</h3>
-              <h5> Air - 1998</h5>
-              <p class="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <%# third card %>
-      <div class="card-home">
-        <h2>Catégorie à la une</h2>
-        <div class="row g-0">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-              </div>
-              <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                <br>
-                <h2>Air</h2>
-                <h2>Moon Safari</h2>
-                <p>Architect &amp; Engineer</p>
-                <p>We love that guy</p>
-                <a href="#" class="btn btn-info">More info</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-7">
-            <div class="card-body">
-              <h3 class="card-title"> Moon Safari</h3>
-              <h5> Air - 1998</h5>
-              <p class="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <br>
 <br>
 <h1>Albums</h1>
@@ -110,136 +21,55 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-                </div>
-                <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                  <br>
-                  <h2>Air</h2>
-                  <h2>Moon Safari</h2>
-                  <p>Architect &amp; Engineer</p>
-                  <p>We love that guy</p>
-                  <a href="#" class="btn btn-info">More info</a>
-                </div>
-              </div>
-            </div>
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
           </div>
           <div class="col">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-                </div>
-                <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                  <br>
-                  <h2>Air</h2>
-                  <h2>Moon Safari</h2>
-                  <p>Architect &amp; Engineer</p>
-                  <p>We love that guy</p>
-                  <a href="#" class="btn btn-info">More info</a>
-                </div>
-              </div>
-            </div>
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
           </div>
           <div class="col">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-                </div>
-                <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                  <br>
-                  <h2>Air</h2>
-                  <h2>Moon Safari</h2>
-                  <p>Architect &amp; Engineer</p>
-                  <p>We love that guy</p>
-                  <a href="#" class="btn btn-info">More info</a>
-                </div>
-              </div>
-            </div>
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
+          </div>
+          <div class="col">
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
+          </div>
+          <div class="col">
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
           </div>
         </div>
       </div>
     </div>
-    <div class="carousel-item">
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-                </div>
-                <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                  <br>
-                  <h2>Air</h2>
-                  <h2>Moon Safari</h2>
-                  <p>Architect &amp; Engineer</p>
-                  <p>We love that guy</p>
-                  <a href="#" class="btn btn-info">More info</a>
-                </div>
-              </div>
-            </div>
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
           </div>
           <div class="col">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-                </div>
-                <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                  <br>
-                  <h2>Air</h2>
-                  <h2>Moon Safari</h2>
-                  <p>Architect &amp; Engineer</p>
-                  <p>We love that guy</p>
-                  <a href="#" class="btn btn-info">More info</a>
-                </div>
-              </div>
-            </div>
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
           </div>
           <div class="col">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="https://i.discogs.com/IMCKmUYVHiQNnkSgyuMoqxrOo4S3-FYl0XC_V6XMCW8/rs:fill/g:sm/q:40/h:700/w:700/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDE2/MTYwLTE2NzU5ODI2/MzQtMzA5OS5qcGVn.jpeg" class="card-img-top" alt="...">
-                </div>
-                <div class="flip-card-back flip-card-back-image text-center align-items-center">
-                  <br>
-                  <h2>Air</h2>
-                  <h2>Moon Safari</h2>
-                  <p>Architect &amp; Engineer</p>
-                  <p>We love that guy</p>
-                  <a href="#" class="btn btn-info">More info</a>
-                </div>
-              </div>
-            </div>
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
+          </div>
+          <div class="col">
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
+          </div>
+          <div class="col">
+            <%= render partial: 'shared/cover', locals: {release: get_non_empty_release} %>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
 </div>
 <br>
-<div class="container">
-  <div class="row justify-content-center">
-    <a href="albums"><button class="btn btn-info">Voir tout</button>
-      <%# <a href="ta_page.html"><button>Redirection</button></a> %>
-    </div>
-  </div>
-  <%# <div class="container">
-  <div class="row justify-content-center">
-  <button class="btn btn-info" href="albums">Voir tout</button>
-  </div>
-  </div> %>
-  <br>
