@@ -24,7 +24,7 @@ class AlbumsController < ApplicationController
     @album = Album.new(album_params)
 
       if @album.save
-          redirect_to album_url(@album), notice: "Album was successfully created." 
+          redirect_to album_url(@album), notice: "Album créé avec succès." 
       else
           render :new, status: :unprocessable_entity
       end
@@ -33,7 +33,7 @@ class AlbumsController < ApplicationController
   # PATCH/PUT /albums/1 or /albums/1.json
   def update
       if @album.update(album_params)
-        redirect_to album_url(@album), notice: "Album was successfully updated." 
+        redirect_to album_url(@album), notice: "Album modifié avec succès." 
       else
         render :edit, status: :unprocessable_entity 
         render json: @album.errors, status: :unprocessable_entity
@@ -43,7 +43,7 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1 or /albums/1.json
   def destroy
     @album.destroy
-    redirect_to albums_url, notice: "Album was successfully destroyed." 
+    redirect_to albums_url, notice: "Album supprimé." 
   end
 
   private
