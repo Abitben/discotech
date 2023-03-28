@@ -8,7 +8,7 @@
   <div class="field mt-4">
     <%= f.label :mot_de_passe %>
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> charactères minimum)</em>
+      <em>(<%= @minimum_password_length %> caractères minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "nouveau mot de passe", class: "form-control" %>
   </div>
