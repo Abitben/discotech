@@ -3,9 +3,9 @@
 en:
   devise:
     confirmations:
-      confirmed: "Votre email a bien été confirmé."
+      confirmed: "Votre adresse email a bien été confirmée."
       send_instructions: "Vous allez recevoir un email avec les instructions pour valider votre adresse email."
-      send_paranoid_instructions: "Si votre email existe déjà dans notre système, vous allez recevoir un email avec la procédure pour le valider."
+      send_paranoid_instructions: "Si votre adresse email existe déjà dans notre système, vous allez recevoir un email avec la procédure pour le valider."
     failure:
       already_authenticated: "Vous êtes déjà connecté."
       inactive: "Votre compte n'est pas activé."
@@ -15,16 +15,16 @@ en:
       not_found_in_database: "Mot de passe ou %{authentication_keys} invalide."
       timeout: "La session a expiré. Veuillez vous reconnecter."
       unauthenticated: "Vous devez vous inscrire ou vous connecter pour continuer."
-      unconfirmed: "Vous devez confirmer votre adresse mail pour continuer."
+      unconfirmed: "Vous devez confirmer votre adresse email pour continuer."
     mailer:
       confirmation_instructions:
         subject: "Confirmation"
       reset_password_instructions:
         subject: "Reconfigurer un mot de passe"
       unlock_instructions:
-        subject: "Instruction de débloquage"
+        subject: "Instruction de déblocage"
       email_changed:
-        subject: "Changement d'email"
+        subject: "Changement d'adresse email"
       password_change:
         subject: "Changement de mot de passe"
     omniauth_callbacks:
