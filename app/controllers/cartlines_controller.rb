@@ -22,7 +22,6 @@ def create
 end
 
   def destroy
-    puts "coucou"
     @cartline = Cartline.find(params[:id])
     @cartline.destroy
     redirect_to cart_path(@current_cart)
