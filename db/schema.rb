@@ -43,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_122644) do
   end
 
   create_table "albums", force: :cascade do |t|
+    t.string "release_id"
+    t.string "image_url"
     t.string "title"
     t.string "artist"
     t.integer "year"
