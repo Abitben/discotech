@@ -5,7 +5,7 @@ class User < ApplicationRecord
     #attachable.variant :thumb, resize_to_limit: [100, 100]
   #end
   
-  # after_create :welcome_send
+  after_create :welcome_send
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   
