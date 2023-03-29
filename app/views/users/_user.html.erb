@@ -27,10 +27,11 @@
     <strong>Téléphone :</strong>
     <%= user.phone %>
   </p>
-  <%= %>
+  <% if action_name == "index" %>
   <p>
     <%= link_to "Profil de l'utilisateur", user, class: 'btn btn-info' %>
   </p>
+  <%end%>
   <hr>
   <div>
     <%= link_to "Editer les informations", edit_user_path(user), class: 'btn btn-form' %>

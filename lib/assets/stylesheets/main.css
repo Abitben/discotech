@@ -72,3 +72,7 @@ h3 {
   margin-right: 0rem;
   border-color: var(--bs-grey-logo);
 }
+
+.row {
+  margin-right: 0rem;
+}
