@@ -1,5 +1,2 @@
-<h2> Order n°: <%= order.id %> - Total : <%= order.cart.sub_total %>€<h2>
+<h3> Commande n°: <%= order.id %> - Total : <%= order.cart.sub_total %>€<h3>
 <%= render partial: 'albums/album', collection: order.cart.albums, spacer_template: 'shared/line_divider' %>
-
-
-

@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
   include UsersHelper
   before_action :set_user, only: %i[ show edit update destroy ]
-  # before_action :is_admin?, only: %i[ index ]
-  # before_action :verify_user?, only: %i[ show edit update destroy ]
-
+  before_action :is_admin?, only: %i[ index ]
+  before_action :verify_user?, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @users = User.all.page(params[:page])
   end
 
   # GET /users/1 or /users/1.json
@@ -28,39 +27,26 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-
-    respond_to do |format|
       if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
+        redirect_to user_url(@user), notice: "Utilisateur créé avec succès."
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
       end
-    end
   end
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
-        format.json { render :show, status: :ok, location: @user }
+      if @user.update!(user_params)
+        redirect_to user_url(@user), notice: "Utilisateur édité avec succès." 
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :edit, status: :unprocessable_entity 
       end
-    end
   end
 
   # DELETE /users/1 or /users/1.json
   def destroy
     @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to users_url, notice: "Utilisateur supprimé." 
   end
 
   private
@@ -71,6 +57,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :address, :zip_code, :city_name, :country, :phone)
+      params.require(:user).permit(:first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, :avatar)
     end
 end

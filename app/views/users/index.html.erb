@@ -1,16 +1,15 @@
-
 <p style="color: green"><%= notice %></p>
-<div class= "row">
-  <div class= "col-sm-1">
-    <h1>Users</h1>
+<div class="container">
+  <div class= "row">
+    <div class= "col-sm-4">
+      <h1>Les utilisateurs</h1>
+    </div>
   </div>
-  <div class= "col-sm-2">
-    <%= link_to "New user", new_user_path, class: 'btn btn-form' %>
+  <div id="users">
+    <% @users.each do |user| %>
+      <%= render partial: 'users/user', layout: 'shared/card_layout', locals: {user: user} %>
+      <%= render partial: 'shared/divider'%>
+    <% end %>
+    <%= paginate @users%>
   </div>
-</div>
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render partial: 'users/user', layout: 'shared/card_layout', locals: {user: user} %>
-    <%= render partial: 'shared/divider'%>
-  <% end %>
 </div>
