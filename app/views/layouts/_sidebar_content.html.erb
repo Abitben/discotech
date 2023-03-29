@@ -1,6 +1,6 @@
 <div class='align-items-center m-5'>
 <%if current_user.avatar.attached?%>
-  <%= image_tag current_user.avatar.variant(resize_to_limit: [90, 90]), alt: "avatar utilisateur" %>
+  <%= image_tag current_user.avatar.variant(resize_to_limit: [90, 90]) %>
 <% else %>
   <p> Pas encore d'avatar </p>
 <% end %>
