@@ -1,0 +1,6 @@
+
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <%= render partial: "albums/album", layout: "shared/card_layout", collection: @albums %>
+  <%= paginate @albums%>
+</div>
