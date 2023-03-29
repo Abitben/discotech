@@ -10,4 +10,8 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
     redirect_to albums_path
   end
+
+  def price
+    @price = @cart.sub_total
+  end
 end
