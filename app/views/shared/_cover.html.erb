@@ -1,12 +1,14 @@
-<div class="flip-card text-center">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <%= image_tag(album.image_url, :size => "200x200") %>
-    </div>
-    <div class="flip-card-back flip-card-back-image">
-      <h5 class="mt-5"><%= album.title %></h5>
-      <h6><%= album.artist %></h6>
-      <p><%= link_to "Plus d'info", release_path(album.release_id), class: 'btn btn-info mt-2'%></p>
+<div class="d-flex justify-content-center">
+  <div class="flip-card text-center">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <%= image_tag(album.image_url, :size => "200x200") %>
+      </div>
+      <div class="flip-card-back flip-card-back-image">
+        <h5 class="mt-5"><%= album.title %></h5>
+        <h6><%= album.artist %></h6>
+        <p><%= link_to "Plus d'info", release_path(album.release_id), class: 'btn btn-info mt-2'%></p>
+      </div>
     </div>
   </div>
 </div>

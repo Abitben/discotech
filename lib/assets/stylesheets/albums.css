@@ -6,6 +6,8 @@
   width: 200px;
   height: 200px;
   perspective: 1000px;
+  justify-content: center;
+  align-content: center;
 }
 
 .flip-card-homepage {

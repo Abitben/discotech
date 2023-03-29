@@ -1,7 +1,4 @@
 
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-}
 
 $animationSpeed: 40s;
 
@@ -20,12 +17,6 @@ $animationSpeed: 40s;
 	background-color: rgba(0, 0, 0, 0.65);
 }
 
-.text-jumbotron {
-	position: relative;
-	top: 50%;
-  left: 50%;
-	color: white;
-}
 
 // Styling
 .slider {
@@ -36,16 +27,7 @@ $animationSpeed: 40s;
 	position: relative;
 	width: auto;
 	
-	&::before,
-	&::after {
-		@include white-gradient;
-		content: "";
-		height: 150px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
-	
+
 	&::after {
 		right: 0;
 		top: 0;
