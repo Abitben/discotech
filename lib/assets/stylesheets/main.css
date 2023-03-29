@@ -34,10 +34,11 @@ p {
 
 body {
   color: #224;
-  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+  background: url(./guillaume-techer-Jm9P0mDPo6A-unsplash.jpg) center / cover no-repeat fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(5px);
 }
 
 * {

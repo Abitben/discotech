@@ -1,32 +1,5 @@
 </div>
 
-<div class="my-jumbotron">
-<h1 class= "text-jumbotron"> Bienvenue sur Discotech <h1>
-  <div class="slider">
-    <div class="slide-track">
-      <% 12.times do %>
-        <div class="slide">
-          <% random = rand(1..1000)%>
-          <% if @wrapper.get_release(random).thumb %>
-            <%= image_tag(@wrapper.get_release(random).thumb) %>
-          <%end%>
-        </div>
-      <%end%>
-    </div>
-  </div>
-  <div class="slider">
-    <div class="anti-slide-track">
-      <% 12.times do %>
-        <div class="slide">
-          <% random = rand(1..1000)%>
-          <% if @wrapper.get_release(random).thumb %>
-            <%= image_tag(@wrapper.get_release(random).thumb) %>
-          <%end%>
-        </div>
-      <%end%>
-    </div>
-  </div>
-</div>
 <!-- Navbar
       ================================================== -->
 <div class="bs-docs-section clearfix">
