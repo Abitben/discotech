@@ -29,26 +29,9 @@
               </ul>
             </li>
           <%end%>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Explorer</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Marketplace</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </li>
+          <%= link_to "Les albums", albums_path, class:"btn btn-primary" %>
+
+          <%= link_to "La marketplace", albums_path, class:"btn btn-primary" %>
         </ul>
         <div class='nav-end navbar-nav align-items-center m-5'>
           <li class="nav-item cart-icon-cont p-2">
@@ -59,7 +42,7 @@
           <li class="nav-item dropdown">
             <% if user_signed_in? %>
               <li>
-                <%= button_to "Déconnexion", destroy_user_session_path, class:"btn btn-warning", method: :delete %>
+                <%= button_to "Déconnexion", destroy_user_session_path, class:"btn btn-danger", method: :delete %>
               </li>
             <% else %>
             </li>

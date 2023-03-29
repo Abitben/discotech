@@ -67,6 +67,12 @@ h3 {
   flex-direction: space-between;
 }
 
+.form-control {
+  margin: 0.43rem;
+  margin-right: 0rem;
+  border-color: var(--bs-grey-logo);
+}
+
 .row {
   margin-right: 0rem;
 }
