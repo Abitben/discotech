@@ -46,6 +46,7 @@
 .flip-card-back {
   color: white;
   transform: rotateY(180deg);
+  color: white;
 }
 
 .flip-card-back-image {
@@ -55,4 +56,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.h5-flip, .h6-flip {
+  color: white;
 }
