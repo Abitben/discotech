@@ -1,4 +1,5 @@
 <p style="color: green"><%= notice %></p>
 <div class="container">
+  <%= render partial: "layouts/button_back_home" %>
   <%= render partial: "albums/album", layout: "shared/card_layout", locals: {album: @album}%>
 </div>
