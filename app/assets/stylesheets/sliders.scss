@@ -1,59 +1,69 @@
-
-
 $animationSpeed: 40s;
 
 // Animation
 @keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
 }
 
 @keyframes antiscroll {
-	0% { transform: translateX(calc(-250px * 7)); }
-	100% { transform: translateX(0); }
+  0% {
+    transform: translateX(calc(-250px * 7));
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .my-jumbotron {
-	background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
+@media (min-width: 992px) {
+	.my-jumbotron-log {
+		background-color: rgba(0, 0, 0, 0.65);
+		max-width: 1560px;
+	}
+}
 
 // Styling
 .slider {
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 150px;
-	margin: auto;
-	overflow:hidden;
-	position: relative;
-	width: auto;
-	
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
 
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
 
-	&::before {
-		left: 0;
-		top: 0;
-	}
-	
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
+  &::before {
+    left: 0;
+    top: 0;
+  }
 
-	.anti-slide-track {
-		animation: antiscroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
 
-	
-	.slide {
-		height: 150px;
-		width: 250px;
-	}
+  .anti-slide-track {
+    animation: antiscroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+
+  .slide {
+    height: 150px;
+    width: 250px;
+  }
 }
