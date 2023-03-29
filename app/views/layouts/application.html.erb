@@ -14,14 +14,6 @@
   <body>
     <%= render 'layouts/navbar'%>
     <% if user_signed_in? %>
-      <div class='row'>
-        <div class='col-lg-2 sidebar-col hidden-lg'>
-          <%= render partial: 'layouts/sidebar' %>
-        </div>
-        <div class='col-8'>
-    <%end%>
-          <%= yield %>
-        </div>
       <div class="container-fluid ">
         <div class="row flex-nowrap">
           <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar-col">
