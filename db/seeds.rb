@@ -79,6 +79,7 @@ puts "cartline is okay"
     sleeve_condition: rand(1..10),
     media_condition: rand(1..10),
     status: rand(0..1),
+    for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
   )
 end
 puts "collection is okay"
