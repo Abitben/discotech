@@ -27,14 +27,18 @@
     <strong>Téléphone :</strong>
     <%= user.phone %>
   </p>
-  <%= %>
-  <p>
-    <%= link_to "Profil de l'utilisateur", user, class: 'btn btn-info' %>
-  </p>
+  <% if action_name == "index" %>
+    <p>
+      <%= link_to "Profil de l'utilisateur", user, class: 'btn btn-info' %>
+    </p>
+  <%end%>
   <hr>
   <div>
+    <% if current_user.is_admin == true %>
+      <%= link_to "Tous les utilisateurs", users_path, class: 'btn' %>
+    <% end %>
     <%= link_to "Editer les informations", edit_user_path(user), class: 'btn btn-form' %>
-    <%= link_to "Tous les utilisateurs", users_path, class: 'btn' %>
     <%= button_to "Supprimer l'utilisateur", user, method: :delete, class: 'btn btn-danger' %>
+    <%= render partial: "layouts/button_back_home" %>
   </div>
 </div>

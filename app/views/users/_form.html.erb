@@ -1,58 +1,59 @@
-<h1>Editer l'utilisateur</h1>
-<%= link_to "retour", @user, class: 'btn btn-success' %>
-<%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> interdit l'enregistrement de cet utilisateur :</h2>
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class= 'mt-4'>
-    <%= form.label :Prénom, style: "display: block" %>
-    <%= form.text_field :Prénom, class: 'form-control' %>
-  </div>
-  <div class= 'mt-4'>
-    <%= form.label :nom, style: "display: block" %>
-    <%= form.text_field :nom, class: 'form-control' %>
-  </div>
-  <div class= 'mt-4'>
-    <%= form.label :adresse, style: "display: block" %>
-    <%= form.text_field :adresse, class: 'form-control' %>
-  </div>
-  <div class= 'mt-4'>
-    <%= form.label :code_postal, style: "display: block" %>
-    <%= form.text_field :code_postal, class: 'form-control' %>
-  </div>
-  <div class= 'mt-4'>
-    <%= form.label :ville, style: "display: block" %>
-    <%= form.text_field :ville, class: 'form-control' %>
-  </div>
-  <div class= 'mt-4'>
-    <%= form.label :pays, style: "display: block" %>
-    <%= form.text_field :pays, class: 'form-control' %>
-  </div>
-  <div class= 'mt-4'>
-    <%= form.label :téléphone, style: "display: block" %>
-    <%= form.text_field :téléphone, class: 'form-control' %>
-  </div>
-  <div class='row mt-4'>
-    <div class= 'col-sm-5'>
-      <div class= ''>
-        <%= form.submit class: 'btn btn-form' %>
+<div class ="d-flex justify-content-start">
+<%= link_to "Retour à Mon profil", @user, class: 'btn' %>
+<%= render partial: "layouts/button_back_home" %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-6'>
+  <h3 class="mt-4">Editer l'utilisateur</h3>
+    <%= form_with(model: user) do |form| %>
+      <% if user.errors.any? %>
+        <div style="color: red">
+          <h3><%= pluralize(user.errors.count, "error") %> interdit l'enregistrement de cet utilisateur :</h3>
+          <ul>
+            <% user.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class= 'mt-4'>
+        <%= form.label :Prénom, style: "display: block" %>
+        <%= form.text_field :first_name, class: 'form-control' %>
       </div>
-    </div>
-    <div class= ''>
-      <h3>Changer d'avatar ?</h3>
-    </div>
-  <% end %>
-  <div class= 'col-sm-3'>
-    <%= form_tag user_avatars_path(@user), multipart: true do %>
-      <%= file_field_tag :avatar %>
-      <%= submit_tag "mettre à jour" %>
+      <div class= 'mt-4'>
+        <%= form.label :nom, style: "display: block" %>
+        <%= form.text_field :last_name, class: 'form-control' %>
+      </div>
+      <div class= 'mt-4'>
+        <%= form.label :adresse, style: "display: block" %>
+        <%= form.text_field :address, class: 'form-control' %>
+      </div>
+      <div class= 'mt-4'>
+        <%= form.label :code_postal, style: "display: block" %>
+        <%= form.text_field :zip_code, class: 'form-control' %>
+      </div>
+      <div class= 'mt-4'>
+        <%= form.label :ville, style: "display: block" %>
+        <%= form.text_field :city_name, class: 'form-control' %>
+      </div>
+      <div class= 'mt-4'>
+        <%= form.label :pays, style: "display: block" %>
+        <%= form.text_field :country, class: 'form-control' %>
+      </div>
+      <div class= 'mt-4'>
+        <%= form.label :téléphone, style: "display: block" %>
+        <%= form.text_field :phone, class: 'form-control' %>
+      </div>
+      <%= form.submit "Mettre à jour", class: 'btn btn-form mt-4' %>
     <% end %>
+    </div>
+    <div class= 'col-lg-4 mt-4'>
+      <h3>Changer d'avatar ?</h3>
+      <%= form_tag user_avatars_path(@user), multipart: true do %>
+        <%= file_field_tag :avatar, class: 'form-control mt-5' %>
+        <%= submit_tag "Mettre à jour", class: 'btn btn-form mt-2' %>
+      <% end %>
+    </div>
   </div>
 </div>

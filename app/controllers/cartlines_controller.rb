@@ -8,7 +8,7 @@ def create
     # If cart already has this album then find the relevant cartline and iterate quantity otherwise create a new cartline for this album
     if current_cart.albums.include?(chosen_album)
       # Find the cartline with the chosen_album
-      @cartline = current_cart.cartlines.find_by(:album_id => chosen_album)
+      @cartline = current_cart.cartlines.find_by(album_id: chosen_album.id)
       # Iterate the cartline's quantity by one
     else
       @cartline = Cartline.new
@@ -22,7 +22,6 @@ def create
 end
 
   def destroy
-    puts "coucou"
     @cartline = Cartline.find(params[:id])
     @cartline.destroy
     redirect_to cart_path(@current_cart)

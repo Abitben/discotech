@@ -1,32 +1,5 @@
 </div>
 
-<div class="my-jumbotron">
-<h1 class= "text-jumbotron"> Bienvenue sur Discotech <h1>
-  <div class="slider">
-    <div class="slide-track">
-      <% 12.times do %>
-        <div class="slide">
-          <% random = rand(1..1000)%>
-          <% if @wrapper.get_release(random).thumb %>
-            <%= image_tag(@wrapper.get_release(random).thumb) %>
-          <%end%>
-        </div>
-      <%end%>
-    </div>
-  </div>
-  <div class="slider">
-    <div class="anti-slide-track">
-      <% 12.times do %>
-        <div class="slide">
-          <% random = rand(1..1000)%>
-          <% if @wrapper.get_release(random).thumb %>
-            <%= image_tag(@wrapper.get_release(random).thumb) %>
-          <%end%>
-        </div>
-      <%end%>
-    </div>
-  </div>
-</div>
 <!-- Navbar
       ================================================== -->
 <div class="bs-docs-section clearfix">
@@ -39,7 +12,7 @@
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <%= link_to albums_path, class: "navbar-brand" do %>
-              <%= image_tag "Logo_Discotech_horiz_blue.png", size: "170x34" %>
+              <%= image_tag ("Logo_Discotech_horiz_blue.png", size: "170x34", alt: "logo Discotech horiz blue") %>
             <% end %>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -186,7 +159,7 @@
                 <nav class="navbar navbar-expand-lg">
                   <div class="container-fluid">
                     <%= link_to albums_path, class: "navbar-brand" do %>
-                      <%= image_tag "Logo_Discotech_horiz_blue.png", size: "170x34" %>
+                      <%= image_tag "Logo_Discotech_horiz_blue.png", size: "170x34", alt: "logo Discotech horiz blue" %>
                     <% end %>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                       <span class="navbar-toggler-icon"></span>

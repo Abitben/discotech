@@ -1,5 +1,5 @@
 <h2>Détails de l'album</h2>
-<%= image_tag(@release.images[0].uri, :size => "200x200") %>
+<%= image_tag(@release.images[0].uri, :size => "200x200", alt: "pochette album") %>
 <p><strong>Nom</strong> : <%= @release.artists[0].name %></p>
 <p><strong>Titre album</strong> : <%= @release.title %></p>
 <p><strong>Label</strong> : <%= @release.labels[0].name %></p>

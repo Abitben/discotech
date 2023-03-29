@@ -10,6 +10,7 @@
   min-width: 50px;
   max-width: 200px;
   box-shadow: #000000;
+  margin: 0.5rem;
 }
 
 .btn:hover{
