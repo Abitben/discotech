@@ -1,32 +1,17 @@
 <p style="color: green"><%= notice %></p>
 <br>
 <br>
-<div class="my-jumbotron">
-<% unless current_user == nil%>
-  <div class="my-jumbotron-log">
-<%end %>
-  <h1 class= "text-jumbotron"> Bienvenue sur Discotech </h1>
-  <div class="slider">
-    <div class="slide-track">
-      <% 12.times do %>
-        <div class="slide">
-          <%= image_tag(Album.all.sample.image_url, :size => "150x150") %>
-        </div>
-      <%end%>
+<div class="container-homepage">
+  <div class="container">
+    <div class='row'>
+      <div class='col'>
+        <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
+      </div>
+      <div class='col'>
+        <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
+      </div>
     </div>
   </div>
-  <div class="slider">
-    <div class="anti-slide-track">
-      <% 12.times do %>
-        <div class="slide">
-          <%= image_tag(Album.all.sample.image_url, :size => "150x150") %>
-        </div>
-      <%end%>
-    </div>
-  </div>
-<% unless current_user == nil%>
-</div>
-<%end %>
 </div>
 <div class="container-homepage">
   <div class="container ">
@@ -51,17 +36,4 @@
     <%end%>
   </div>
   <br>
-</div>
-<div class="container-homepage">
-  <div class="container">
-    <div class='row'>
-      <div class='col'>
-        <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
-      </div>
-      <div class='col'>
-        <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
