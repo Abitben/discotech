@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  after_create :welcome_send
   paginates_per 10
   
   has_one_attached :avatar #do |attachable|
