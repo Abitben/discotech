@@ -25,14 +25,16 @@
 </div>
 <div class="container-homepage">
   <div class="container ">
-    <div class="row d-flex justify-content-center text-center">
-      <div class= "col-6">
-        <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
+    <% if current_user == nil %>
+      <div class="row d-flex justify-content-center text-center">
+        <div class= "col-6">
+          <%= render partial: 'devise/shared/signup', layout: 'shared/card_layout' %>
+        </div>
+        <div class= "col-6">
+          <%= render partial: 'devise/shared/signin', layout: 'shared/card_layout' %>
+        </div>
       </div>
-      <div class= "col-6">
-        <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <div class="container">
@@ -49,10 +51,10 @@
   <div class="container">
     <div class='row'>
       <div class='col'>
-        <%= render partial: 'devise/shared/signup', layout: 'shared/card_layout' %>
+        <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
       </div>
       <div class='col'>
-      <%= render partial: 'devise/shared/signin', layout: 'shared/card_layout' %>
+        <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
       </div>
     </div>
   </div>
