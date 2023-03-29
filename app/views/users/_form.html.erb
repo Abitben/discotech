@@ -1,9 +1,9 @@
 <%= link_to "Retour à Mon profil", @user, class: 'btn' %>
 
-<h1 class="mt-4">Editer l'utilisateur</h1>
 
 <div class='row'>
   <div class='col-lg-6'>
+  <h1 class="mt-4">Editer l'utilisateur</h1>
     <%= form_with(model: user) do |form| %>
       <% if user.errors.any? %>
         <div style="color: red">
@@ -43,15 +43,14 @@
         <%= form.label :téléphone, style: "display: block" %>
         <%= form.text_field :phone, class: 'form-control' %>
       </div>
-      <%= form.submit class: 'btn btn-form' %>
+      <%= form.submit class: 'btn btn-form mt-4' %>
     <% end %>
     </div>
-    </div>
-    <div class= 'col-lg-3'>
-      <h3>Changer d'avatar ?</h3>
+    <div class= 'col-lg-4 mt-4'>
+      <h2>Changer d'avatar ?</h2>
       <%= form_tag user_avatars_path(@user), multipart: true do %>
-        <%= file_field_tag :avatar %>
-        <%= submit_tag "Mettre à jour", class: 'btn btn-form' %>
+        <%= file_field_tag :avatar, class: 'form-control mt-5' %>
+        <%= submit_tag "Mettre à jour", class: 'btn btn-form mt-2' %>
       <% end %>
     </div>
   </div>
