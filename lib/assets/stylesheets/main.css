@@ -43,6 +43,11 @@ body {
 
 * {
   font-family: Helvetica, sans-serif;
+  color: var(--bs-grey-logo);
+}
+
+h1, h2 {
+  color: var(--bs-light-blue);
 }
 
 h2 {
@@ -51,6 +56,10 @@ h2 {
 
 h3 {
   font-weight: 600;
+}
+
+h3, h4, h5, h6 {
+  color: var(--bs-grey-logo);
 }
 
 /* divider-color */
