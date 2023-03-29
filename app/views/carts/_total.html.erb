@@ -1,5 +1,10 @@
-<h3>Total : <%= number_to_currency(cart.sub_total) %></h3>
-<%= button_to "Paiement", checkout_create_path(total: cart.sub_total), class: "btn btn-primary", remote: true, class: "btn btn-success", "data-turbo" => "false" %>
-<br>
-<hr>
-<%= link_to "Vider le panier", cart_path(@current_cart),method: :delete, data: {confirm: "Êtes-vous sur ?"}, class: 'btn btn-warning' %>
+<% if cart.sub_total != 0 %>
+  <h3>Total : <%= number_to_currency(cart.sub_total) %></h3>
+  <%= button_to "Paiement", checkout_create_path(total: cart.sub_total), class: "btn btn-primary", remote: true, class: "btn btn-success", "data-turbo" => "false" %>
+  <br>
+  <hr>
+  <%= button_to "Vider le panier", cart_path(@current_cart),method: :delete, data: {confirm: "Êtes-vous sur ?"}, class: 'btn btn-warning' %>
+<% else %>
+  <a>Votre panier est vide</a>
+  <%= link_to "Voir les albums", albums_path, class: 'btn' %>
+<% end %>
