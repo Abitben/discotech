@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
-<div class="container">
-  <%= render partial: "layouts/button_back_home" %>
+<div class="container mt-5">
+  <%= link_to "Retour à l'accueil", root_path, class: 'btn' %>
   <%= render partial: "albums/album", layout: "shared/card_layout", collection: @albums %>
   <%= paginate @albums%>
 </div>
