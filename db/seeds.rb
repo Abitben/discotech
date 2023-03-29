@@ -82,4 +82,5 @@ puts "cartline is okay"
     for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
   )
 end
+
 puts "collection is okay"
