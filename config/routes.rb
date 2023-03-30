@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     resources :orders, only: [:index]
     resources :ads, only: [:index]
   end
+
   get 'avatars/create'
+
+  resources :marketplaces, only: [:index, :show]
 
   get '/KitUI', to: 'demo#show'
 
@@ -21,6 +24,10 @@ Rails.application.routes.draw do
   post 'cartlines' => "cartlines#create"
   get 'cartlines/:id' => "cartlines#show", as: "cartline"
   delete 'cartlines/:id' => "cartlines#destroy", as: 'cartline_destroy'
+
+  post 'add_wishlist' => "collection#add_to_wishlist"
+  post 'add_collection' => "collection#add_to_collection"
+
 
   resources :releases, only: [:index, :show]
   get '/search/:id', to: 'releases#search', as: 'search'

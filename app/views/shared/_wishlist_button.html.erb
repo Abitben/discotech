@@ -1,5 +1,1 @@
-<button type="button" class="btn btn-w m-1">
-<span class="btn-label">
-    <i class="bi bi-bookmark-star-fill"></i>
-</span>  Ajouter à la wishlist
-</button>
+<%= button_to "Ajouter à ma wishlist", add_wishlist_path(:release_id => @release.id, :image_url => @release.images[0].uri, :title => @release.title, :artist => @release.artists[0].name, :year => @release.year), class: 'btn btn-cart' %>

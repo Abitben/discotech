@@ -1,12 +1,13 @@
 <p style="color: green"><%= notice %></p>
 <h1>Mon profil</h1>
-<div class="row">
-  <div class="col-sm-3">
     <h2> Mes informations </h2>
     <%= render partial: "users/user", layout: "shared/card_layout", locals: {user: @user} %>
+<<<<<<< HEAD
   </div>
   <div class="col-sm-8">
     <h2> Mes commandes <h2>
     <%= render partial: 'orders/order', collection: @orders, layout: "shared/card_layout", spacer_template: 'shared/divider'  %>
   </div>
+=======
+>>>>>>> 447dffa663abfeb68b42ca3841cd40bed493bee2
 </div>

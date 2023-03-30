@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <%= button_to "Ajouter à la collection", collection_path(:collection_id => collection.id), class: 'btn btn-info' %>
+=======
+<%= button_to "Ajouter à ma collection", add_collection_path(:release_id => @release.id, :image_url => @release.images[0].uri, :title => @release.title, :artist => @release.artists[0].name, :year => @release.year), class: 'btn btn-cart' %>
+>>>>>>> 447dffa663abfeb68b42ca3841cd40bed493bee2
