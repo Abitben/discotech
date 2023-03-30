@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
-<h1> Mes commandes</h1>
-<div class="row">
-  <%= render partial: 'orders/order', collection: @orders, layout: "shared/card_layout", spacer_template: 'shared/divider' %>
-</div>
+<div clas='container'>
+  <h1> Mes commandes</h1>
+  <div class="row">
+    <%= render partial: 'orders/order', collection: @orders, layout: "shared/card_layout", spacer_template: 'shared/divider' %>
+  </div>
 </div>

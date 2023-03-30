@@ -1,4 +1,6 @@
+<div class='container'>
 <h1>Mes annonces</h1>
 <% @myads.each do |ad|%>
-  <%= render partial: 'marketplaces/for_sale', locals: {collection: ad}, layout: 'shared/card_layout' %>
+  <%= render partial: 'shared/copy', locals: {collection: ad}, layout: 'shared/card_layout' %>
 <%end%>
+</div>
