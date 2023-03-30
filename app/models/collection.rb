@@ -29,5 +29,5 @@ class Collection < ApplicationRecord
     Tres_mauvais_état: 7,
     Raye: 8,
     Saute: 9,
-    Endommagé: 10 }, prefix: true
+    Endommagé: 10 }, prefix: true    
 end
