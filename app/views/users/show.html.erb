@@ -6,11 +6,7 @@
     <%= render partial: "users/user", layout: "shared/card_layout", locals: {user: @user} %>
   </div>
   <div class="col-sm-8">
-    <h2> Ma collection </h2>
-    <%= render partial: "albums/album", layout: "shared/card_layout", collection: @albums, spacer_template: 'shared/divider' %>
-
     <h2> Mes commandes <h2>
     <%= render partial: 'orders/order', collection: @orders, layout: "shared/card_layout", spacer_template: 'shared/divider'  %>
-
   </div>
 </div>
