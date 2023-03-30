@@ -1,5 +1,6 @@
-class MarketplaceController < ApplicationController
+class MarketplacesController < ApplicationController
   def index
+    @collections = Collection.all.page(params[:page])
   end
 
   def show

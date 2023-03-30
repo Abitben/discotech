@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'avatars/create'
 
-  resources :marketplace, only: [:index, :show]
+  resources :marketplaces, only: [:index, :show]
 
   get '/KitUI', to: 'demo#show'
 
