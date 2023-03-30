@@ -53,23 +53,6 @@ User.create(email: "admin@discotech.com", password: "Admin@THPforUser75", is_adm
 puts "user is okay"
 
 
-# seed for orders table
-10.times do
-  Order.create!(
-    user_id: User.all.sample.id,
-    cart_id: Cart.all.sample.id,
-  )
-end
-puts "order is okay"
-
-# seed for cartlines table
-10.times do
-  Cartline.create!(
-    album_id: Album.all.sample.id,
-    cart_id: Cart.all.sample.id,
-  )
-end
-puts "cartline is okay"
 
 # seed for collections table
 10.times do
@@ -84,3 +67,22 @@ puts "cartline is okay"
 end
 
 puts "collection is okay"
+
+# seed for cartlines table
+10.times do
+  Cartline.create!(
+    collection_id: Collection.all.sample.id,
+    cart_id: Cart.all.sample.id,
+  )
+end
+puts "cartline is okay"
+
+
+# seed for orders table
+10.times do
+  Order.create!(
+    user_id: User.all.sample.id,
+    cart_id: Cart.all.sample.id,
+  )
+end
+puts "order is okay"

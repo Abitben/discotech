@@ -2,6 +2,9 @@ class Collection < ApplicationRecord
   belongs_to :album
   belongs_to :user
 
+  has_many :cartlines
+  has_many :carts, through: :cartlines
+
   enum :status, { wished: 0, owned: 1}
   enum :sleeve_condition, { A_renseigner: 0,
     Neuf: 1,
