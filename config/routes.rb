@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'marketplace/index'
-  get 'marketplace/show'
   devise_for :users
   get '/', to:'home#index', as: 'root'
   resources :users do
@@ -10,7 +8,10 @@ Rails.application.routes.draw do
     resources :orders, only: [:index]
     resources :ads, only: [:index]
   end
+
   get 'avatars/create'
+
+  resources :marketplace, only: [:index, :show]
 
   get '/KitUI', to: 'demo#show'
 
