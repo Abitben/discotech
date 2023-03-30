@@ -1,2 +1,4 @@
-<h1>Ads#index</h1>
-<p>Find me in app/views/ads/index.html.erb</p>
+<h1>Mes annonces</h1>
+<% @myads.each do |ad|%>
+  <%= render partial: 'marketplaces/for_sale', locals: {collection: ad}, layout: 'shared/card_layout' %>
+<%end%>
