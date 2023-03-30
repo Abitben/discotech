@@ -4,3 +4,4 @@ import "controllers"
 import "bootstrap.bundle"
 import "accordion_custom"
 import "script_onclick"
+import 'searchbar'
