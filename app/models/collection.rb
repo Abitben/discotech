@@ -1,4 +1,6 @@
 class Collection < ApplicationRecord
+  validate :unique_album_status_per_user
+  
   before_save :update_for_sale_status
 
   belongs_to :album
@@ -39,6 +41,15 @@ class Collection < ApplicationRecord
         self.for_sale = false
       end
     end
+
+
+  def unique_album_status_per_user
+    if user.collections.exists?(album_id: album_id, status: status == "owned" ? "wished" : "owned")
+      errors.add(:base, "This album is already in the collection with a different status")
+    end
+  end
+
+
 
 
 end

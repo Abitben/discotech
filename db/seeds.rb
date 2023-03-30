@@ -53,18 +53,30 @@ User.create(email: "admin@discotech.com", password: "Admin@THPforUser75", is_adm
 puts "user is okay"
 
 
-
 # seed for collections table
 10.times do
-  Collection.create!(
-    album_id: Album.all.sample.id,
-    user_id: User.all.sample.id,
-    sleeve_condition: rand(1..10),
-    media_condition: rand(1..10),
-    status: rand(0..1),
-    for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
-  )
+  album = Album.all.sample
+  user = User.all.sample
+  status = Collection.statuses.keys.sample
+
+  # Vérifier s'il existe déjà une ligne avec le même album et le même utilisateur avec un autre statut
+  if Collection.exists?(album_id: album.id, user_id: user.id, status: status == "owned" ? "wished" : "owned")
+    next
+    else # passer à la prochaine itération si une ligne existe déjà
+      collection = Collection.create!(
+        album: album,
+        user: user,
+        sleeve_condition: rand(1..10),
+        media_condition: rand(1..10),
+        status: status,
+        for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
+      )
+    
+  end
+
+  collection.save!
 end
+
 
 puts "collection is okay"
 
