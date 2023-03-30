@@ -21,12 +21,20 @@
             <div class="col py-3">
             </div>
           </div>
-      <%end%>
-      <div class="col py-3", data-turbo="false">
-        <%= yield %>
+        <%end%>
+        <div class="col py-3", data-turbo="false">
+          <div class= "container">
+            <%= render partial: 'shared/divider' %>
+            <div class= "row">
+              <%= link_to :back, class: 'btn-link' do %>
+                <i class="bi bi-arrow-return-left"></i> retour
+              <% end %>
+            </div>
+          </div>
+          <%= yield %>
+        </div>
       </div>
-      </div>
-      </div>
-      <%= render 'layouts/footer'%>
-    </body>
-  </html>
+    </div>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>
