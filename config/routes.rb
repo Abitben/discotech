@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   delete 'cartlines/:id' => "cartlines#destroy", as: 'cartline_destroy'
 
   post 'add_wishlist' => "collection#add_to_wishlist"
+  delete 'remove_wishlist' => "collection#remove_from_wishlist"
   post 'add_collection' => "collection#add_to_collection"
 
 

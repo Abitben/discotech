@@ -26,7 +26,7 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
 
   validate :password_complexity
-  validate :phone, numericality: { only_integer: true }
+  validates :phone, numericality: { only_integer: true }
 
   def password_complexity
     return if password.blank? || password =~ /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
