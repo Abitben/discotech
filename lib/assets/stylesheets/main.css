@@ -77,7 +77,7 @@ h3, h4, h5, h6 {
 }
 
 .form-control {
-  margin: 0.43rem;
+  margin: 0.5rem;
   margin-right: 0rem;
   border-color: var(--bs-grey-logo);
   border: none;

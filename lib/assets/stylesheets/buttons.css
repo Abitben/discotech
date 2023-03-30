@@ -29,7 +29,7 @@
   border-color: var(--bs-gray-green-logo);
   background-color:var(--bs-gray-green-logo) ;
   color: var(--bs-regular-white);
-  margin: 0.43rem;
+  margin: 0.5rem;
 }
 
 .btn-search-alt{
