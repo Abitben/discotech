@@ -1,4 +1,6 @@
 class Collection < ApplicationRecord
+  before_save :update_for_sale_status
+
   belongs_to :album
   belongs_to :user
 
@@ -29,5 +31,14 @@ class Collection < ApplicationRecord
     Tres_mauvais_état: 7,
     Raye: 8,
     Saute: 9,
-    Endommagé: 10 }, prefix: true    
+    Endommagé: 10 }, prefix: true
+
+
+    def update_for_sale_status
+      if status == "wished" && for_sale
+        self.for_sale = false
+      end
+    end
+
+
 end
