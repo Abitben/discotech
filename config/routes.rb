@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  get 'avatars/create'
-  get '/', to:'home#index', as: 'root'
-  get '/KitUI', to: 'demo#show'
-  get 'demo/show'
-  resources :albums
   devise_for :users
+  get '/', to:'home#index', as: 'root'
   resources :users do
     resources :avatars, only: [:create]
+    resources :collection, only: [:index]
+    resources :wishlist, only: [:index]
+    resources :orders, only: [:index]
+    resources :ads, only: [:index]
   end
+  get 'avatars/create'
+
+  get '/KitUI', to: 'demo#show'
+
+  resources :albums
 
   get 'carts/:id' => "carts#show", as: "cart"
   get 'carts/show'
