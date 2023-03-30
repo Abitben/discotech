@@ -1,1 +1,3 @@
-<%= button_to "Ajouter au panier", cartlines_path(:collection_id => collection.id), class: 'btn btn-cart' %>
+<%= button_to cartlines_path(:collection_id => collection.id), class: 'btn btn-cart' do %>
+  <i class="bi bi-cart-fill" style= 'color: black'></i> Ajouter au panier
+<% end %>

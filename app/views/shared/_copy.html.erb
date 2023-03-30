@@ -1,12 +1,13 @@
 <div class = "row" data-turbo="false">
-  <div class = "col-sm-3 col-md-5">
+  <div class = "col-sm-3">
     <%= image_tag(collection.album.image_url, :size => "200x200", alt: "album") %>
-    <% unless controller_name == "ads" %>
-    <%= render partial: "shared/add_to_cart", locals: {collection: collection} %>
+    <% if controller_name == "marketplaces" %>
+      <%= render partial: "shared/add_to_cart", locals: {collection: collection} %>
     <%end%>
     <% if action_name == "show" %>
       <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
+    <%= render partial: "shared/link_release", locals: {collection: collection} %>
   </div>
   <div class="col-sm-4">
     <div class="card-header ">
@@ -33,12 +34,19 @@
       </div>
     </div>
   <% end %>
-    <div class="col-sm-3">
-      <button class="myaccordion">Vendeur</button>
-      <div class="mypanel">
-        <br>
-        <p><%= collection.user.first_name%> <%= collection.user.last_name%> </p>
-        <br>
-      </div>
+  <div class="col-sm-4">
+    <button class="myaccordion">Vendeur</button>
+    <div class="mypanel">
+      <br>
+      <p><%= collection.user.first_name%> <%= collection.user.last_name%> </p>
+      <br>
     </div>
+     <button class="myaccordion">Etat de l'album</button>
+    <div class="mypanel">
+      <br>
+      <p><strong>Etat de la pochette : </strong> <%= collection.sleeve_condition.gsub("_", " ").capitalize %></p> 
+      <p><strong>Etat du vinyl : </strong> <%= collection.media_condition.gsub("_", " ").capitalize%> </p>
+      <br>
+    </div>
+  </div>
 </div>

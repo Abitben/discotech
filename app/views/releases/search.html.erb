@@ -1,5 +1,7 @@
+<div class='container'>
 <h1>Résultats de la recherche</h1>
 <%@results.each do |result|%>
   <%= render partial: 'releases/search', locals: {release: result}, layout: 'shared/card_layout'%>
 <%end%>
 <%= paginate @results %>
+</div>

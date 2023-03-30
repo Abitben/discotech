@@ -1,3 +1,2 @@
-<%= render partial: 'albums/for_sale', locals: {collection: cartline.collection } %>
-
-<%= button_to "Remove item", cartline_destroy_path(cartline.id), method: :delete, class: 'btn btn-danger' %>
+<%= render partial: 'shared/copy', locals: {collection: cartline.collection } %>
+<%= button_to "Retirer l'album du panier", cartline_destroy_path(cartline.id), method: :delete, class: 'btn btn-danger' %>

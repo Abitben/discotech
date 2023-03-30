@@ -1,9 +1,13 @@
-<h1>Marketplace</h1>
-<p>Retrouvez tous les albums en vente dans cet espace !</p>
-<div class="container mt-5">
-  <%= link_to "Retour à l'accueil", root_path, class: 'btn' %>
-  <% @collections.each do |collection| %>
-    <%= render partial: 'marketplaces/for_sale', locals: {collection: collection}, layout: 'shared/card_layout'%>
-  <%end%>
-  <%= paginate @ads %>
+
+<div class='container mt-4'>
+  <h1>Marketplace</h1>
+  <H2>Retrouvez tous les albums en vente dans cet espace !</h2>
+      <%= link_to "Retour à l'accueil", root_path, class: 'btn' %>
+  <div class="container mt-5">
+  
+    <% @collections.each do |collection| %>
+      <%= render partial: 'shared/copy', locals: {collection: collection}, layout: 'shared/card_layout'%>
+    <%end%>
+    <%= paginate @ads %>
+  </div>
 </div>
