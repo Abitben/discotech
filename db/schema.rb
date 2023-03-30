@@ -70,6 +70,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_122644) do
   create_table "collections", force: :cascade do |t|
     t.bigint "album_id", null: false
     t.bigint "user_id", null: false
+    t.integer "sleeve_condition", default: 0
+    t.integer "media_condition", default: 0
+    t.integer "status", default: 0
+    t.boolean "for_sale", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["album_id"], name: "index_collections_on_album_id"
