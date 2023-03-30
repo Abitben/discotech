@@ -69,17 +69,11 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   
   # Mise en place du letter-opener
-  config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.delivery_method = :letter_opener
 
   config.action_mailer.perform_deliveries = true
 
-<<<<<<< HEAD
-  config.action_mailer.default_url_options = { :host => 'mighty-ravine-24300.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'https://discotech.herokuapp.com' }
   config.action_mailer.perform_deliveries = true # false pour suspendre l'envoi d'emails par l'app 
   config.action_mailer.delivery_method = :smtp
-=======
-  # config.action_mailer.default_url_options = { :host => 'https://discotech.herokuapp.com' }
-  # config.action_mailer.perform_deliveries = true # false pour suspendre l'envoi d'emails par l'app 
-  # config.action_mailer.delivery_method = :smtp
->>>>>>> 1c357ff6153fa87d8cdddc76dda85b260d41e07d
 end
