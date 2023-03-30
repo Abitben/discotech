@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   delete 'cartlines/:id' => "cartlines#destroy", as: 'cartline_destroy'
 
   resources :releases, only: [:index, :show]
+  get '/search/:id', to: 'releases#search', as: 'search'
 
   # Stripe routes
   scope '/checkout' do
