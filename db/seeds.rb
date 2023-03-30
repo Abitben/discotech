@@ -76,6 +76,11 @@ puts "cartline is okay"
   Collection.create!(
     album_id: Album.all.sample.id,
     user_id: User.all.sample.id,
+    sleeve_condition: rand(1..10),
+    media_condition: rand(1..10),
+    status: rand(0..1),
+    for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
   )
 end
+
 puts "collection is okay"
