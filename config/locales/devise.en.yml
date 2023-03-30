@@ -32,12 +32,12 @@ en:
       success: "Successfully authenticated from %{kind} account."
     passwords:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password has been changed successfully. You are now signed in."
-      updated_not_active: "Your password has been changed successfully."
+      send_instructions: "Vous allez recevoir un mail avec les instructions pour réinitialiser votre mot de passe."
+      send_paranoid_instructions: "Votre adresse email est présente en base de donnée, vous allez recevoir un lien pour récupérer votre mot de passe par email."
+      updated: "Vous avez bien modifié votre mot de passe. Vous êtes bien connecté."
+      updated_not_active: "Votre mot de passe a bien été modifié."
     registrations:
-      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      destroyed: "BA bientôt! Nous sommes triste de vous annoncer que votre compte a bien été supprimé."
       signed_up: "Bienvenue ! Vous êtes bien inscrit."
       signed_up_but_inactive: "Inscrit avec succès. En attente de confirmation de votre part."
       signed_up_but_locked: "Inscrit avec succés. Compte bloqué."

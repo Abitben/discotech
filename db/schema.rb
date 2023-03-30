@@ -54,12 +54,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_122644) do
   end
 
   create_table "cartlines", force: :cascade do |t|
-    t.bigint "album_id", null: false
+    t.bigint "collection_id", null: false
     t.bigint "cart_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_cartlines_on_album_id"
     t.index ["cart_id"], name: "index_cartlines_on_cart_id"
+    t.index ["collection_id"], name: "index_cartlines_on_collection_id"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -70,6 +70,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_122644) do
   create_table "collections", force: :cascade do |t|
     t.bigint "album_id", null: false
     t.bigint "user_id", null: false
+    t.integer "sleeve_condition", default: 0
+    t.integer "media_condition", default: 0
+    t.integer "status", default: 0
+    t.boolean "for_sale", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["album_id"], name: "index_collections_on_album_id"
@@ -107,8 +111,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_122644) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "cartlines", "albums"
   add_foreign_key "cartlines", "carts"
+  add_foreign_key "cartlines", "collections"
   add_foreign_key "collections", "albums"
   add_foreign_key "collections", "users"
   add_foreign_key "orders", "carts"

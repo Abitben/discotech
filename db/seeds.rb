@@ -53,6 +53,31 @@ User.create(email: "admin@discotech.com", password: "Admin@THPforUser75", is_adm
 puts "user is okay"
 
 
+
+# seed for collections table
+10.times do
+  Collection.create!(
+    album_id: Album.all.sample.id,
+    user_id: User.all.sample.id,
+    sleeve_condition: rand(1..10),
+    media_condition: rand(1..10),
+    status: rand(0..1),
+    for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
+  )
+end
+
+puts "collection is okay"
+
+# seed for cartlines table
+10.times do
+  Cartline.create!(
+    collection_id: Collection.all.sample.id,
+    cart_id: Cart.all.sample.id,
+  )
+end
+puts "cartline is okay"
+
+
 # seed for orders table
 10.times do
   Order.create!(
@@ -61,21 +86,3 @@ puts "user is okay"
   )
 end
 puts "order is okay"
-
-# seed for cartlines table
-10.times do
-  Cartline.create!(
-    album_id: Album.all.sample.id,
-    cart_id: Cart.all.sample.id,
-  )
-end
-puts "cartline is okay"
-
-# seed for collections table
-10.times do
-  Collection.create!(
-    album_id: Album.all.sample.id,
-    user_id: User.all.sample.id,
-  )
-end
-puts "collection is okay"

@@ -1,2 +1,4 @@
-<h3> Commande n°: <%= order.id %> - Total : <%= order.cart.sub_total %>€<h3>
-<%= render partial: 'albums/album', collection: order.cart.albums, spacer_template: 'shared/line_divider' %>
+<h3> Commande n°: <%= order.id %> - Total : <%= order.cart.sub_total %>€</h3>
+<% order.cart.collections.each do |collection|%>
+  <%= render partial: 'albums/for_sale', locals: {collection: collection}, spacer_template: 'shared/line_divider' %>
+<%end%>

@@ -1,5 +1,5 @@
 <% if cart.sub_total != 0 %>
-  <h3>Total : <%= number_to_currency(cart.sub_total) %></h3>
+  <h3>Total : <%= number_to_currency(cart.sub_total, :locale => :fr) %></h3>
   <%= button_to "Paiement", checkout_create_path(total: cart.sub_total), class: "btn btn-primary", remote: true, class: "btn btn-success", "data-turbo" => "false" %>
   <br>
   <hr>
