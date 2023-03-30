@@ -85,3 +85,4 @@ gem "discogs-wrapper", "~> 2.5"
 gem 'kaminari'
 gem "mini_magick"
 gem "image_processing", "~> 1.0"
+gem 'sendgrid-ruby'
