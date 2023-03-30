@@ -1,3 +1,1 @@
-<% if controller_name == "albums"  %>
-  <%= button_to "Ajouter au panier", cartlines_path(:collection_id => collection.id), class: 'btn btn-cart' %>
-<% end %>
+<%= button_to "Ajouter au panier", cartlines_path(:collection_id => collection.id), class: 'btn btn-cart' %>

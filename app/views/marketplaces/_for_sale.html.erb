@@ -1,9 +1,11 @@
 <div class = "row" data-turbo="false">
   <div class = "col-sm-3 col-md-5">
     <%= image_tag(collection.album.image_url, :size => "200x200", alt: "album") %>
+    <% unless controller_name == "ads" %>
     <%= render partial: "shared/add_to_cart", locals: {collection: collection} %>
+    <%end%>
     <% if action_name == "show" %>
-      <%= link_to "Retour aux albums", albums_path, class: 'btn' %>
+      <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
   </div>
   <div class="col-sm-4">
