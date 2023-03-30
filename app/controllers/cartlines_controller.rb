@@ -6,14 +6,14 @@ def create
     current_cart = @current_cart
 
     # If cart already has this album then find the relevant cartline and iterate quantity otherwise create a new cartline for this album
-    if current_cart.albums.include?(chosen_album)
+    if current_cart.collections.include?(chosen_album)
       # Find the cartline with the chosen_album
-      @cartline = current_cart.cartlines.find_by(album_id: chosen_album.id)
+      @cartline = current_cart.cartlines.find_by(collection_id: chosen_album.id)
       # Iterate the cartline's quantity by one
     else
       @cartline = Cartline.new
       @cartline.cart = current_cart
-      @cartline.album = chosen_album
+      @cartline.collection = chosen_album
     end
   
     # Save and redirect to cart show path
@@ -29,7 +29,7 @@ end
   
 private
     def cartline_params
-        params.require(:cartline).permit(:album_id, :cart_id)
+        params.require(:cartline).permit(:collection_id, :cart_id)
     end
 
 end
