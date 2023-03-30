@@ -2,7 +2,7 @@ class CartlinesController < ApplicationController
 
 def create
     # Find associated album and current cart
-    chosen_album = Album.find(params[:album_id])
+    chosen_album = Collection.find(params[:collection_id])
     current_cart = @current_cart
 
     # If cart already has this album then find the relevant cartline and iterate quantity otherwise create a new cartline for this album
