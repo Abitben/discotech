@@ -1,0 +1,9 @@
+.my-search-form {
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  .my-search-form.search-expanded {
+    width: 900px;
+  }
+}

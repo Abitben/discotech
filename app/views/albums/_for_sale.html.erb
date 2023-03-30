@@ -1,0 +1,42 @@
+<div class = "row" data-turbo="false">
+  <div class = "col-sm-3 col-md-5">
+    <%= image_tag(collection.album.image_url, :size => "200x200", alt: "album") %>
+    <%= render partial: "shared/add_to_cart", locals: {collection: collection} %>
+    <% if action_name == "show" %>
+      <%= link_to "Retour aux albums", albums_path, class: 'btn' %>
+    <% end %>
+  </div>
+  <div class="col-sm-4">
+    <div class="card-header ">
+      <h3 class="card-title"> <%= collection.album.title %></h3>
+      <h5 class="card-title">  <%= collection.album.artist %> - <%= collection.album.year %></h5>
+      <h4 class="card-title"> <strong>€ <%= collection.album.price %></strong></h4>
+    </div>
+    <div class ="card-body">
+      <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
+      <h6 class ="card-text"> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
+      <h6 class ="card-text"> <strong>Pays </strong>: US </h6>
+      <h6 class ="card-text"> <strong>Sortie</strong> : févr. 2023 </h6>
+      <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
+      <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
+    </div>
+  </div>
+  <% if controller_name == "albums" && action_name == "show" %>
+    <div class="col-sm-3">
+      <button class="myaccordion">Labels</button>
+      <div class="mypanel">
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+      </div>
+    </div>
+  <% end %>
+    <div class="col-sm-3">
+      <button class="myaccordion">Vendeur</button>
+      <div class="mypanel">
+        <br>
+        <p><%= collection.user.first_name%> <%= collection.user.last_name%> </p>
+        <br>
+      </div>
+    </div>
+</div>

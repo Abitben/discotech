@@ -30,4 +30,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 .env
+<<<<<<< HEAD
 sendgrid.env
+=======
+sendgrid.env
+>>>>>>> f210acc52d6beba2b9bfc144f07197022b574082
