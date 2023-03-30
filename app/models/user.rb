@@ -23,14 +23,13 @@ class User < ApplicationRecord
   has_many :collections, dependent: :destroy
   has_many :albums, through: :collections
 
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   validate :password_complexity
+  validate :phone, numericality: { only_integer: true }
 
   def password_complexity
-    # Regexp extracted from https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
     return if password.blank? || password =~ /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
-
     errors.add :password, 'Veuillez inclure : 1 lettre capitale, 1 lettre minuscule, 1 chiffre and 1 caractère spécial'
   end
 
@@ -39,10 +38,6 @@ class User < ApplicationRecord
  # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
   def order_send
   UserMailer.order_send(self).deliver_now
-  end
-
-  def wishlist
-    Wishlist.index
   end
 
 end

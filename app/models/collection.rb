@@ -6,7 +6,7 @@ class Collection < ApplicationRecord
   belongs_to :album
   belongs_to :user
 
-  has_many :cartlines
+  has_many :cartlines, dependent: :destroy
   has_many :carts, through: :cartlines
 
   enum :status, { wished: 0, owned: 1}

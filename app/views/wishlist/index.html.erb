@@ -1,7 +1,6 @@
 <div class='container'>
-<h1>Ma Wishlist</h1>
-
-<% @wished_albums.each do |wished| %>
-<%= render partial: "albums/for_sale", locals: {collection: wished}, layout: "shared/card_layout" %>
-<%end%>
+  <h1>Ma Wishlist</h1>
+  <% @wished_albums.each do |wished| %>
+    <%= render partial: "albums/for_sale", locals: {collection: wished}, layout: "shared/card_layout" %>
+  <%end%>
 </div>
