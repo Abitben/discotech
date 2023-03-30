@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'marketplace/index'
+  get 'marketplace/show'
   devise_for :users
   get '/', to:'home#index', as: 'root'
   resources :users do
