@@ -15,12 +15,12 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav me-auto align-items-center justify-content-center">
-          <form class="d-flex p-2">
+          <%= form_tag search_path(:id), method: :get, class: "d-flex p-2" do %>
             <div class="input-group p-5">
-              <input type="text" class="form-control" placeholder="Rechercher des artistes, des albums, des genres ..." aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-search" type="button" id="button-addon2">Rechercher</button>
+              <%= text_field_tag(:search, nil, class: "form-control", placeholder: "Rechercher des artistes, des albums, des genres ...", aria: {label: "Recipient's username"}) %>
+              <%= button_tag("Rechercher", type: "submit", class: "btn btn-search", id: "button-addon2") %>
             </div>
-          </form>
+          <% end %>
           <% if user_signed_in? %>
             <li class="nav-item dropdown under-992px">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon espace</a>
@@ -30,7 +30,6 @@
             </li>
           <%end%>
           <%= link_to "Les albums", albums_path, class:"btn btn-primary" %>
-
           <%= link_to "La marketplace", albums_path, class:"btn btn-primary" %>
         </ul>
         <div class='nav-end navbar-nav align-items-center m-5'>

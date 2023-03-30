@@ -7,7 +7,7 @@ class ReleasesController < ApplicationController
   end
 
   def search
-    search = @wrapper.search(params[:id], :per_page => 50, :type => :release)
+    search = @wrapper.search(params[:search], :per_page => 50, :type => :release)
     @results = Kaminari.paginate_array(search.results.to_a).page(params[:page]).per(5)
   end
 end
