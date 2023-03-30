@@ -19,16 +19,19 @@ class CollectionController < ApplicationController
     Collection.create(user_id: current_user.id, album_id: album.id, status: 1)
   end
 
-  def remove_from_wishlist
-    @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
-    @collection.destroy
-  end
-
   def remove_from_collection
     @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
     @collection.destroy
   end
 
+  def sell_owned_album
+    @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
+    @collection.update!(for_sale: true)
+  end
 
+  def unsell_owned_album
+    @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
+    @collection.update!(for_sale: false)
+  end
 
 end

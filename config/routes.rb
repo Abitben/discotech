@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   post 'add_collection' => "collection#add_to_collection"
   delete 'remove_collection' => "collection#remove_from_collection"
 
+  patch 'to_sell' => 'collection#sell_owned_album'
+  patch 'unsell_album' => 'collection#unsell_owned_album'
 
   resources :releases, only: [:index, :show]
   get '/search/:id', to: 'releases#search', as: 'search'

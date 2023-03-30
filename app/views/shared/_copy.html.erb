@@ -14,6 +14,12 @@
     <% if controller_name == "collection" %>
       <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
     <%end%>
+    <% if controller_name == "collection" %>
+      <%= render partial: 'shared/sell_button', locals: {collection: collection} %>
+    <%end%>
+     <% if controller_name == "ads" %>
+      <%= render partial: 'shared/unsell_button', locals: {collection: collection} %>
+    <%end%>
   </div>
   <div class="col-sm-4">
     <div class="card-header ">

@@ -1,5 +1,8 @@
 <h3>Détails de l'album</h3>
 <%= image_tag(release.thumb, :size => "200x200", alt: "pochette album") %>
+<%= link_to release_path(release.id), class: "btn btn-info" do %>
+  <i class="bi bi-eye"></i> En savoir plus
+<% end %>
 <p><strong>Titre de l'album</strong> : <%= release.title %></p>
 <p><strong>Label</strong> : <%= release.label[0] %></p>
 <p><strong>Pays</strong> : <%= release.country %></p>
