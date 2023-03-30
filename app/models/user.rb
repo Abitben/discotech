@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  after_create :welcome_send
   paginates_per 10
   
   has_one_attached :avatar #do |attachable|
@@ -9,6 +10,10 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # ,:confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   
+  # User Wishlist
+  has_one :wishlist 
+
+
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
@@ -33,8 +38,12 @@ class User < ApplicationRecord
 
  # validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
  # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
- def order_send
+  def order_send
   UserMailer.order_send(self).deliver_now
- end
+  end
+
+  def wishlist
+    Wishlist.index
+  end
 
 end
