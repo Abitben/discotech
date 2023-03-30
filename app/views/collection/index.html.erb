@@ -1,5 +1,4 @@
 <h1>Ma collection</h1>
 <% @user_collection.each do |collectable| %>
 <%= render partial: "albums/for_sale", locals: {collection: collectable}, layout: "shared/card_layout" %>
-<%= collectable.album.title %>
 <% end %>
