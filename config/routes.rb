@@ -27,7 +27,9 @@ Rails.application.routes.draw do
 
   post 'add_wishlist' => "collection#add_to_wishlist"
   delete 'remove_wishlist' => "collection#remove_from_wishlist"
+
   post 'add_collection' => "collection#add_to_collection"
+  delete 'remove_collection' => "collection#remove_from_collection"
 
 
   resources :releases, only: [:index, :show]

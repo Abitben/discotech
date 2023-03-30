@@ -24,6 +24,11 @@ class CollectionController < ApplicationController
     @collection.destroy
   end
 
+  def remove_from_collection
+    @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
+    @collection.destroy
+  end
+
 
 
 end

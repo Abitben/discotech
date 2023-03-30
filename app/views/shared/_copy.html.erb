@@ -8,7 +8,12 @@
       <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
     <%= render partial: "shared/link_release", locals: {collection: collection} %>
-    <%= button_to "Retirer de ma wishlist", remove_wishlist_path(album_id: collection.album.id, user_id: params[:user_id]), method: :delete, class: 'btn btn-danger', data: { confirm: 'Êtes-vous sûr ?' } %>
+    <% if controller_name == 'wishlist'%>
+      <%= render partial: 'shared/remove_wished', locals: {collection: collection} %>
+    <%end%>
+    <% if controller_name == "collection" %>
+      <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
+    <%end%>
   </div>
   <div class="col-sm-4">
     <div class="card-header ">
