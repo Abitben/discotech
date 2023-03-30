@@ -1,5 +1,7 @@
-<%= button_to "Ajouter au panier", cartlines_path(:collection_id => collection.id), class: 'btn btn-cart' %>
+<% if controller_name == "albums"  %>
+  <%= button_to "Ajouter au panier", cartlines_path(:collection_id => collection.id), class: 'btn btn-cart' %>
+<% end %>
 <span class ="btn btn-marketplace">
-<i class = "bi-cart-fill icon-marketplace"></i>
-<%= link_to "Marketplace", root_path %>
+  <i class = "bi-cart-fill icon-marketplace"></i>
+  <%= link_to "Marketplace", root_path %>
 </span>
