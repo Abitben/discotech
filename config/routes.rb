@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     resources :ads, only: [:index]
   end
 
-  get 'avatars/create'
-
   resources :marketplaces, only: [:index, :show]
 
   get '/KitUI', to: 'demo#show'
