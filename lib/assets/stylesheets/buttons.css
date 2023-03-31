@@ -99,3 +99,11 @@
 .btn-marketplace {
   color: black
 }
+
+.btn-link {
+  color: var(--bs-gray-green-logo);
+}
+
+.btn-link:hover{
+  color: white;
+}

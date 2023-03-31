@@ -16,7 +16,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav me-auto align-items-center justify-content-center">
           <%= form_tag search_path(:id), method: :get, class: "d-flex p-2 my-search-form" do %>
-            <div class="input-group p-5">
+            <div class="input-group p-3">
               <%= text_field_tag(:search, nil, class: "form-control", placeholder: "Rechercher des artistes, des albums, des genres ...", aria: {label: "Recipient's username"}) %>
               <%= button_tag("Rechercher", type: "submit", class: "btn btn-search", id: "button-addon2") %>
             </div>
@@ -29,7 +29,6 @@
               </ul>
             </li>
           <%end%>
-          <%= link_to "Les albums", albums_path, class:"btn" %>
           <%= render 'shared/marketplace_button' %>
         </ul>
         <div class='nav-end navbar-nav align-items-center m-5'>
