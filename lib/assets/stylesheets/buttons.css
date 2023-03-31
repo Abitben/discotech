@@ -120,4 +120,10 @@
 
 .custom-actual-page {
   background-color: var(--bs-gray-green-logo);
+  color: var(--bs-grey-green-logo);
+}
+
+.custom-actual-page:hover {
+  background-color: var(--bs-gray-green-logo);
+  color: var(--bs-grey-green-logo);
 }
