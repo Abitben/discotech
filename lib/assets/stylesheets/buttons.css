@@ -107,3 +107,17 @@
 .btn-link:hover{
   color: white;
 }
+
+.custom-pagination-style {
+  color: var(--bs-grey-logo);
+  opacity: 70%;
+}
+
+.custom-pagination-style:hover {
+  color: var(--bs-gray-green-logo);
+  opacity: 100%;
+}
+
+.custom-actual-page {
+  background-color: var(--bs-gray-green-logo);
+}
