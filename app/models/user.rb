@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  # after_create :welcome_send
+
+  after_create :welcome_send
   paginates_per 10
   
   has_one_attached :avatar
@@ -9,7 +10,6 @@ class User < ApplicationRecord
   
   # User Wishlist
   has_one :wishlist 
-
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
@@ -33,6 +33,7 @@ class User < ApplicationRecord
 
  # validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
  # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
+
   def order_send
   UserMailer.order_send(self).deliver_now
   end
