@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
+    @user.avatar.attach(params[:avatar])
       if @user.save
         redirect_to user_url(@user), notice: "Utilisateur créé avec succès."
       else

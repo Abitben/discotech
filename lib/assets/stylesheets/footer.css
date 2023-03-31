@@ -2,7 +2,8 @@
   padding:40px 0;
   background-color: var(--bs-grey-logo);
   color:#ffffff;
-  margin-top: auto
+  margin-top: auto;
+  width: 100%;
 }
 
 .footer-basic ul {

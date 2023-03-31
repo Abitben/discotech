@@ -6,7 +6,7 @@ class CreateCollections < ActiveRecord::Migration[7.0]
       t.integer :sleeve_condition, default: 0
       t.integer :media_condition, default: 0
       t.integer :status, default: 0
-      t.boolean :for_sale, default: false
+      t.integer :for_sale, default: 0
 
       t.timestamps
     end

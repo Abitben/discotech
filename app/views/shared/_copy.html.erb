@@ -1,5 +1,5 @@
-<div class = "row" data-turbo="false">
-  <div class = "col-sm-3">
+<div class = "row", data-turbo="false">
+  <div class = "col-sm-3 col-md-6 col-lg-3">
     <%= image_tag(collection.album.image_url, :size => "200x200", alt: "album") %>
     <% if controller_name == "marketplaces" %>
       <%= render partial: "shared/add_to_cart", locals: {collection: collection} %>
@@ -8,8 +8,20 @@
       <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
     <%= render partial: "shared/link_release", locals: {collection: collection} %>
+    <% if controller_name == 'wishlist'%>
+      <%= render partial: 'shared/remove_wished', locals: {collection: collection} %>
+    <%end%>
+    <% if controller_name == "collection" %>
+      <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
+    <%end%>
+    <% if controller_name == "collection" %>
+      <%= render partial: 'shared/sell_button', locals: {collection: collection} %>
+    <%end%>
+     <% if controller_name == "ads" %>
+      <%= render partial: 'shared/unsell_button', locals: {collection: collection} %>
+    <%end%>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4 col-md-6 col-lg-4">
     <div class="card-header ">
       <h3 class="card-title"> <%= collection.album.title %></h3>
       <h5 class="card-title">  <%= collection.album.artist %> - <%= collection.album.year %></h5>
@@ -41,10 +53,10 @@
       <p><%= collection.user.first_name%> <%= collection.user.last_name%> </p>
       <br>
     </div>
-     <button class="myaccordion">Etat de l'album</button>
+    <button class="myaccordion">Etat de l'album</button>
     <div class="mypanel">
       <br>
-      <p><strong>Etat de la pochette : </strong> <%= collection.sleeve_condition.gsub("_", " ").capitalize %></p> 
+      <p><strong>Etat de la pochette : </strong> <%= collection.sleeve_condition.gsub("_", " ").capitalize %></p>
       <p><strong>Etat du vinyl : </strong> <%= collection.media_condition.gsub("_", " ").capitalize%> </p>
       <br>
     </div>
