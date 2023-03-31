@@ -9,6 +9,7 @@ class Collection < ApplicationRecord
   has_many :cartlines, dependent: :destroy
   has_many :carts, through: :cartlines
 
+  enum :for_sale, { pas_en_vente: 0, en_vente: 1, vendu: 2 }
   enum :status, { wished: 0, owned: 1}
   enum :sleeve_condition, { A_renseigner: 0,
     Neuf: 1,
