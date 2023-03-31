@@ -16,7 +16,7 @@ Tour d'horizon de ce qu'il est possible de faire avec Discotech
 - Se connecter
 - Accèder à son espace personnel
 - Ajouter un avatar
-- Rechercher des vinyles via une barre de recherche
+- Rechercher les vinyles de l'API Discogs via la barre de recherche
 - Ajouter/supprimer des vinyles à/de sa collection
 - Ajouter/supprimer des vinyles à/de sa wishlist
 - Générer/supprimer des annonces de vente
