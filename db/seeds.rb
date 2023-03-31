@@ -46,6 +46,7 @@ puts 'cart is okay'
     password: Faker::Internet.password(min_length: 6, max_length: 20, mix_case: true,
                                        special_characters: true) + "#{rand(1..50)}"
   )
+
 end
 
 User.create(email: 'admin@discotech.com', password: 'Admin@THPforUser75', is_admin: true)
@@ -66,9 +67,14 @@ puts 'user is okay'
     user:,
     sleeve_condition: rand(1..10),
     media_condition: rand(1..10),
-    status:,
-    for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
+    status: rand(0..1),
+    for_sale: rand(0..2),
   )
+
+  if collection.status == "wished"
+    collection.pas_en_vente!
+  end
+
 end
 
 puts 'collection is okay'

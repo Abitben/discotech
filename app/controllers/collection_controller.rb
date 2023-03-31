@@ -1,7 +1,7 @@
 class CollectionController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @user_collection = @user.collections.owned
+    @user_collection = @user.collections.owned.where.not(for_sale: 2)
   end
 
   def add_to_wishlist
@@ -30,13 +30,13 @@ class CollectionController < ApplicationController
 
   def sell_owned_album
     @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
-    @collection.update!(for_sale: true)
+    @collection.update!(for_sale: 1)
     redirect_to user_ads_path(current_user.id)
   end
 
   def unsell_owned_album
     @collection = Collection.find_by(user_id: params[:user_id], album_id: params[:album_id])
-    @collection.update!(for_sale: false)
+    @collection.update!(for_sale: 0)
     redirect_to user_ads_path(current_user.id)
   end
 
