@@ -1,3 +1,26 @@
-.container-homepage{
+.container-homepage {
   background-color: rgba(163, 217, 200, 0.65);
+}
+
+.jumbotron {
+  background: url(./eric-krull-fi3_lDi3qPE-unsplash.jpg) center / cover
+    no-repeat fixed;
+  color: var(--bs-gray-green-logo);
+  backdrop-filter: blur(20px);
+}
+
+@media (min-width: 992px) {
+  .search-home {
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .text-intro {
+    font-size: 70px;
+  }
+}
+
+.text-intro {
+  font-weight: 900;
+  color: var(--bs-gray-logo);
 }
