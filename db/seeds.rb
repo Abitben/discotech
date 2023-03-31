@@ -66,8 +66,8 @@ puts 'user is okay'
     user:,
     sleeve_condition: rand(1..10),
     media_condition: rand(1..10),
-    status:,
-    for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
+    status: rand(0..1),
+    for_sale: rand(0..2),
   )
 end
 
