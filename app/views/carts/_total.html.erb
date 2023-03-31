@@ -6,5 +6,5 @@
   <%= button_to "Vider le panier", cart_path(@current_cart),method: :delete, data: {confirm: "Êtes-vous sur ?"}, class: 'btn btn-warning' %>
 <% else %>
   <a>Votre panier est vide</a>
-  <%= link_to "Voir les albums", albums_path, class: 'btn' %>
+  <%= render 'shared/marketplace_button' %>
 <% end %>

@@ -65,3 +65,23 @@
   backdrop-filter: blur(15px);
   justify-content: space-between;
 }
+
+.card-release{
+  color: black;
+  margin:auto;
+  justify-content: center;
+  width: 900px;
+  max-height: auto;
+  padding: 15px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: invert(50%);
+  justify-content: space-between;
+}
+
+.card-sub{
+  width: 50%;
+}

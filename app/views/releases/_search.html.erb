@@ -1,5 +1,8 @@
 <h3>Détails de l'album</h3>
 <%= image_tag(release.thumb, :size => "200x200", alt: "pochette album") %>
+<%= link_to release_path(release.id), class: "btn btn-info" do %>
+  <i class="bi bi-eye"></i> En savoir plus
+<% end %>
 <p><strong>Titre de l'album</strong> : <%= release.title %></p>
 <p><strong>Label</strong> : <%= release.label[0] %></p>
 <p><strong>Pays</strong> : <%= release.country %></p>
@@ -7,7 +10,4 @@
 <p><strong>Genre</strong> : <%= release.genre[0] %></p>
 <p><strong>Style</strong> : <%= release.style[0] %></p>
 <div class ="d-flex justify-content-around">
-  <%= render partial: "shared/collection_button" %>
-  <%= render partial: "shared/wishlist_button" %>
-  <%= render partial: "shared/add_to_cart" %>
 </div>

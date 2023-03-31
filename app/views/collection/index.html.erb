@@ -1,2 +1,6 @@
-<h1>Collection#index</h1>
-<p>Find me in app/views/collection/index.html.erb</p>
+<div class='container'>
+  <h1>Ma collection</h1>
+  <% @user_collection.each do |collectable| %>
+    <%= render partial: "shared/copy", locals: {collection: collectable}, layout: "shared/card_layout" %>
+  <% end %>
+</div>

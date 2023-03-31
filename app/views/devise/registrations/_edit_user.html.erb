@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-5">
-    <h2>Editer <%= resource_name.to_s.humanize %></h2>
+    <h3>Editer mon mot de passe</h3>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="field mt-4">
@@ -11,18 +11,18 @@
         <div>En attente de confirmation pour : <%= resource.unconfirmed_email %></div>
       <% end %>
       <div class="field mt-4">
-        <%= f.label :current_password %> <strong>(Merci de renseigner votre mot de passe actuel pour valider les changements)</strong><br />
+        <%= f.label :Mot_de_passe_actuel %> <strong>(Merci de renseigner votre mot de passe actuel pour valider les changements)</strong><br />
         <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
       </div>
       <div class="field mt-4">
-        <%= f.label :password %> <strong>(laisser vide si vous ne souhaitez pas le changer)</strong><br />
+        <%= f.label :Nouveau_mot_de_passe %> <strong>(laisser vide si vous ne souhaitez pas le changer)</strong><br />
         <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
         <% if @minimum_password_length %>
           <em><%= @minimum_password_length %> caractères minimum</em>
         <% end %>
       </div>
       <div class="field mt-4">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :Confirmation_du_mot_de_passe %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
       </div>
       <div class="actions mt-4">

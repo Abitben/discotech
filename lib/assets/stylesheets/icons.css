@@ -2,7 +2,6 @@
 
 i{
   color: var(--bs-black);
-  font-size: 20px;
 }
 
 .bi-cart-fill{
@@ -17,4 +16,13 @@ i{
 .icon-marketplace{
   color: black;
   text-decoration: none;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border: 5px solid var(--bs-grey-logo);
+  background-color: var(--bs-gray-green-logo);
 }

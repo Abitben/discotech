@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCollections < ActiveRecord::Migration[7.0]
   def change
     create_table :collections do |t|
@@ -6,7 +8,7 @@ class CreateCollections < ActiveRecord::Migration[7.0]
       t.integer :sleeve_condition, default: 0
       t.integer :media_condition, default: 0
       t.integer :status, default: 0
-      t.boolean :for_sale, default: false
+      t.integer :for_sale, default: 0
 
       t.timestamps
     end

@@ -1,20 +1,29 @@
 <p style="color: green"><%= notice %></p>
 <br>
 <br>
-<div class="container-homepage">
-  <div class="container">
-    <div class='row'>
-      <div class='col'>
-        <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
-      </div>
-      <div class='col'>
-        <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
-      </div>
+<div class="p-5 text-center rounded-3 jumbotron">
+  <div class='card'>
+    <div class="container">
+      <svg class="bi mt-4 mb-3" width="100" height="100"><use xlink:href="#bootstrap"></use></svg>
+      <h1 class="text-intro">Bienvenue sur Discotech !</h1>
+      <p class="col-lg-8 mx-auto fs-5" style="color: white">
+        Commencez vos premières recherches pour explorer les albums !
+      </p>
+      <br>
+     
     </div>
-  </div>
-</div>
-<div class="container-homepage">
-  <div class="container ">
+      <div class="d-inline-flex gap-2 mb-5 d-flex justify-content-center">
+        <%= form_tag search_path(:id), method: :get, class: "d-flex p-2 my-search-form search-home" do %>
+          <div class="input-group p-3">
+            <%= text_field_tag(:search, nil, class: "form-control", placeholder: "Rechercher des artistes, des albums, des genres ...", aria: {label: "Recipient's username"}) %>
+            <%= button_tag("Rechercher", type: "submit", class: "btn btn-search", id: "button-addon2") %>
+          </div>
+        <% end %>
+      </div>
+        <p class="col-lg-8 mx-auto fs-5" style="color: white">
+        N'oubliez pas de vous enregistrer pour profiter des fonctionnalités de wishlist, de collection et pouvoir passer commande !
+      </p>
+     <div class="container ">
     <% if current_user == nil %>
       <div class="row d-flex justify-content-center text-center">
         <div class= "col-6">
@@ -25,6 +34,19 @@
         </div>
       </div>
     <% end %>
+  </div>
+  </div>
+</div>
+<div class="container-homepage">
+  <div class="container">
+    <div class='row'>
+      <div class='col'>
+        <%= render partial: "home/best_seller", layout: "shared/card_layout", locals: {album: @album_best_seller} %>
+      </div>
+      <div class='col'>
+        <%= render partial: "home/best_sell", layout: "shared/card_layout", locals: {album: @best_sell} %>
+      </div>
+    </div>
   </div>
 </div>
 <div class="container">

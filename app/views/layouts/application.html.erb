@@ -14,19 +14,25 @@
   <body>
     <%= render 'layouts/navbar'%>
     <% if user_signed_in? %>
-      <div class="container-fluid ">
+      <div class="container-fluid", data-turbo="false">
         <div class="row flex-nowrap">
           <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidebar-col">
             <%= render partial: 'layouts/sidebar' %>
             <div class="col py-3">
             </div>
           </div>
-      <%end%>
-      <div class="col py-3", data-turbo="false">
-        <%= yield %>
+        <%end%>
+        <div class="col py-3">
+          <div class= "container">
+            <%= render partial: 'shared/divider' %>
+              <%= link_to :back, class: 'btn-link' do %>
+                <i class="bi bi-arrow-return-left"></i> retour
+              <% end %>
+          </div>
+          <%= yield %>
+        </div>
       </div>
-      </div>
-      </div>
-      <%= render 'layouts/footer'%>
-    </body>
-  </html>
+    </div>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>

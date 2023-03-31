@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def is_admin?
-    if user_signed_in?
-      return true if current_user.is_admin == true
+    return true if user_signed_in? && (current_user.is_admin == true)
 
-      redirect_to root_path
+    redirect_to root_path
+  end
 
-    else
-      redirect_to root_path
-    end
+  def verify_user?
+    return true if current_user == @user || current_user.is_admin == true
+
+    redirect_to root_path
   end
 
   def profile_completed?
@@ -38,4 +41,6 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def wish_not_for_sale; end
 end

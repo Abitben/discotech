@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "albums/show", type: :view do
+RSpec.describe 'albums/show', type: :view do
   before(:each) do
     assign(:album, Album.create!(
-      title: "Title",
-      artist: "Artist",
-      year: 2,
-      price: "9.99"
-    ))
+                     title: 'Title',
+                     artist: 'Artist',
+                     year: 2,
+                     price: '9.99'
+                   ))
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/Artist/)
