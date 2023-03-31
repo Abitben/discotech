@@ -1,6 +1,7 @@
-class CartlinesController < ApplicationController
+# frozen_string_literal: true
 
-def create
+class CartlinesController < ApplicationController
+  def create
     # Find associated album and current cart
     chosen_album = Collection.find(params[:collection_id])
     current_cart = @current_cart
@@ -15,21 +16,21 @@ def create
       @cartline.cart = current_cart
       @cartline.collection = chosen_album
     end
-  
+
     # Save and redirect to cart show path
     @cartline.save!
     redirect_to cart_path(current_cart)
-end
+  end
 
   def destroy
     @cartline = Cartline.find(params[:id])
     @cartline.destroy
     redirect_to cart_path(@current_cart)
-  end  
-  
-private
-    def cartline_params
-        params.require(:cartline).permit(:collection_id, :cart_id)
-    end
+  end
 
+  private
+
+  def cartline_params
+    params.require(:cartline).permit(:collection_id, :cart_id)
+  end
 end

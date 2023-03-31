@@ -1,7 +1,7 @@
 <div class = "row", data-turbo="false">
   <div class = "col-sm-3 col-md-6 col-lg-3">
     <%= image_tag(collection.album.image_url, :size => "200x200", alt: "album") %>
-    <% if controller_name == "marketplaces" %>
+    <% if controller_name == "marketplaces" && current_user != collection.user %>
       <%= render partial: "shared/add_to_cart", locals: {collection: collection} %>
     <%end%>
     <% if action_name == "show" %>
@@ -13,7 +13,7 @@
     <% if controller_name == "collection" && current_user == collection.user %>
       <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
     <%end%>
-    <% if controller_name == "collection" && current_user == collection.user %>
+    <% if controller_name == "collection" && current_user == collection.user && collection.pas_en_vente? %>
       <%= render partial: 'shared/sell_button', locals: {collection: collection} %>
     <%end%>
      <% if controller_name == "ads" && current_user == collection.user %>

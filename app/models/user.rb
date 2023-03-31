@@ -1,20 +1,21 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # after_create :welcome_send
   paginates_per 10
-  
+
   has_one_attached :avatar
-  
+
   # Include default devise modules. Others available are:
   # ,:confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  
-  # User Wishlist
-  has_one :wishlist 
 
+  # User Wishlist
+  has_one :wishlist
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
-  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -27,14 +28,13 @@ class User < ApplicationRecord
 
   def password_complexity
     return if password.blank? || password =~ /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
+
     errors.add :password, 'Veuillez inclure : 1 lettre capitale, 1 lettre minuscule, 1 chiffre and 1 caractère spécial'
   end
 
-
- # validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
- # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
+  # validates :first_name, :last_name, :address, :zip_code, :city_name, :country, :phone, presence: true
+  # validates :first_name, :last_name, length: { minimum: 1, message: "Doit avoir plus d'un caractère" }
   def order_send
-  UserMailer.order_send(self).deliver_now
+    UserMailer.order_send(self).deliver_now
   end
-
 end

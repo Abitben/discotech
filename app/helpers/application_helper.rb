@@ -1,23 +1,17 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def is_admin?
-    if user_signed_in?
-      return true if current_user.is_admin == true
+    return true if user_signed_in? && (current_user.is_admin == true)
 
-      redirect_to root_path
-
-    else
-      redirect_to root_path
-    end
+    redirect_to root_path
   end
 
   def verify_user?
-    if current_user == @user || current_user.is_admin == true
-      return true 
-    else
-      redirect_to root_path
-    end
+    return true if current_user == @user || current_user.is_admin == true
+
+    redirect_to root_path
   end
-  
 
   def profile_completed?
     exceptions = %w[reset_password_token reset_password_sent_at remember_created_at is_admin]
@@ -48,11 +42,5 @@ module ApplicationHelper
     @devise_mapping ||= Devise.mappings[:user]
   end
 
-  def wish_not_for_sale
-    
-    
-  end
-
-
-
+  def wish_not_for_sale; end
 end

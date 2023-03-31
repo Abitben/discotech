@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CartsController < ApplicationController
   def show
     @cart = @current_cart
@@ -10,5 +12,4 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
     redirect_to cart_path
   end
-
 end
