@@ -4,5 +4,4 @@ class Album < ApplicationRecord
     has_many :users, through: :collections
 
     validates :title, :artist, :year, :price, presence: true
-    validates :release_id, uniqueness: true
 end

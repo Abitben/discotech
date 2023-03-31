@@ -9,4 +9,3 @@ pin "bootstrap.bundle", preload: true
 pin "accordion_custom", preload: true
 pin "script_onclick", preload: true
 pin "color_generator", preload: true
-pin "searchbar", preload: true

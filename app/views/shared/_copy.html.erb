@@ -7,17 +7,16 @@
     <% if action_name == "show" %>
       <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
-    <%= render partial: "shared/link_release", locals: {collection: collection} %>
-    <% if controller_name == 'wishlist'%>
+    <% if controller_name == 'wishlist' && current_user == collection.user %>
       <%= render partial: 'shared/remove_wished', locals: {collection: collection} %>
     <%end%>
-    <% if controller_name == "collection" %>
+    <% if controller_name == "collection" && current_user == collection.user %>
       <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
     <%end%>
-    <% if controller_name == "collection" %>
+    <% if controller_name == "collection" && current_user == collection.user %>
       <%= render partial: 'shared/sell_button', locals: {collection: collection} %>
     <%end%>
-     <% if controller_name == "ads" %>
+     <% if controller_name == "ads" && current_user == collection.user %>
       <%= render partial: 'shared/unsell_button', locals: {collection: collection} %>
     <%end%>
   </div>
@@ -26,14 +25,7 @@
       <h3 class="card-title"> <%= collection.album.title %></h3>
       <h5 class="card-title">  <%= collection.album.artist %> - <%= collection.album.year %></h5>
       <h4 class="card-title"> <strong>€ <%= collection.album.price %></strong></h4>
-    </div>
-    <div class ="card-body">
-      <h6 class ="card-text"> <strong>Label </strong>: Parlophone – 190296159305 </h6>
-      <h6 class ="card-text"> <strong>Format</strong> : Vinyl Me, Please. Essentials – E122</h6>
-      <h6 class ="card-text"> <strong>Pays </strong>: US </h6>
-      <h6 class ="card-text"> <strong>Sortie</strong> : févr. 2023 </h6>
-      <h6 class ="card-text"> <strong>Genre </strong>: Electronic </h6>
-      <h6 class ="card-text"> <strong>Style </strong>: Future Jazz, Downtempo, Synth-pop </h6>
+      <%= render partial: "shared/link_release", locals: {collection: collection} %>
     </div>
   </div>
   <% if controller_name == "albums" && action_name == "show" %>
