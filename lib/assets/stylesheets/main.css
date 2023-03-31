@@ -26,7 +26,13 @@
 }
 
 
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width:100%;
+  height: 100%;
+}
 
 p {
   margin: 0;
@@ -36,8 +42,6 @@ body {
   color: #224;
   background: url(./guillaume-techer-Jm9P0mDPo6A-unsplash.jpg) center / cover no-repeat fixed;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   backdrop-filter: blur(5px);
 }
 
