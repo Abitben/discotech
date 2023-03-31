@@ -1,15 +1,30 @@
-<h2>Détails de l'album</h2>
-<%= image_tag(@release.images[0].uri, :size => "200x200", alt: "pochette album") %>
-<p><strong>Nom</strong> : <%= @release.artists[0].name %></p>
-<p><strong>Titre album</strong> : <%= @release.title %></p>
-<p><strong>Label</strong> : <%= @release.labels[0].name %></p>
-<p><strong>Pays</strong> : <%= @release.country %></p>
-<p><strong>Date de sortie</strong> : <%= @release.year %></p>
-<p><strong>Genre</strong> : <%= @release.genres[0] %></p>
-<p><strong>Style</strong> : <%= @release.styles[0] %></p>
+<div class = "d-flex align-items-start">
+  <div class = "card-sub">
+    <h2 class ="title-release">Détails de l'album</h2>
+    <%= image_tag(@release.images[0].uri, :size => "200x200", alt: "pochette album") %><br><br>
+    <h4><strong>Artiste</strong></h4>
+    <p><strong>Artiste</strong> : <%= @release.artists[0].name %></p>
+    <p><strong>Descriptif</strong> : <%= @artist.profile %></p>
+    <%= render partial: "shared/line_divider" %>
+    <h4><strong>Album</strong></h4>
+    <p><strong>Titre</strong> : <%= @release.title %></p>
+    <p><strong>Label</strong> : <%= @release.labels[0].name %></p>
+    <p><strong>Pays</strong> : <%= @release.country %></p>
+    <p><strong>Date de sortie</strong> : <%= @release.year %></p>
+    <p><strong>Genre</strong> : <%= @release.genres[0] %></p>
+    <p><strong>Style</strong> : <%= @release.styles[0] %></p>
+    <%= render partial: "shared/line_divider" %>
+    <h4><strong>Identification</strong></h4>
+    <p><strong>Type</strong> : <%= @release.identifiers[0].type %></p>
+    <p><strong>Code</strong> : <%= @release.identifiers[0].value %></p>
+    <%= render partial: "shared/line_divider" %>
 
-
-<div class ="d-flex justify-content-around">
-<%= render partial: "shared/collection_button" %>
-<%= render partial: "shared/wishlist_button" %>
+  </div>
+  <div class = card-sub>
+    <%= render partial: "releases/release_tracklist" %>
+  </div>
 </div>
+    <div class ="d-flex justify-content-around">
+      <%= render partial: "shared/collection_button" %>
+      <%= render partial: "shared/wishlist_button" %>
+    </div>

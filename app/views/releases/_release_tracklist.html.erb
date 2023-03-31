@@ -1,0 +1,25 @@
+
+<div class="col-sm-12">
+  <div class="tracklist-release">
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Piste</th>
+          <th scope="col">Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @release.tracklist.each do |track| %>
+          <tr>
+            <td><%= track.position %></td>
+            <td><%= track.title %></td>
+            <td><%= track.duration %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+  </div>
+</div>

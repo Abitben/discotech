@@ -1,6 +1,7 @@
 class ReleasesController < ApplicationController
   def show
     @release = @wrapper.get_release(params[:id])
+    @artist = @wrapper.get_artist(params[:id])
   end
 
   def index
