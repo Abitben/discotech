@@ -1,6 +1,13 @@
 class UserMailer < ApplicationMailer
     default from: 'ulrichvoitier@yahoo.fr'
 
+
+  # app/mailers/user_mailer.rb
+  # def welcome_reset_password_instructions(user)
+  #   mail(to: user.email, subject: 'Welcome to the New Site')
+  # end
+
+
   def welcome_email(user)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
     @user = user 
