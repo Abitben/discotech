@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class MarketplacesController < ApplicationController
   def index
-    @collections = Collection.where(for_sale: 1) 
+    @collections = Collection.where(for_sale: 1)
     @ads = Kaminari.paginate_array(@collections.to_a).page(params[:page]).per(5)
   end
 

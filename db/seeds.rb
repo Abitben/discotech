@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -44,9 +46,8 @@ puts 'cart is okay'
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.unique.email,
     password: Faker::Internet.password(min_length: 6, max_length: 20, mix_case: true,
-                                       special_characters: true) + "#{rand(1..50)}"
+                                       special_characters: true) + rand(1..50).to_s
   )
-
 end
 
 User.create(email: 'admin@discotech.com', password: 'Admin@THPforUser75', is_admin: true)
@@ -68,13 +69,10 @@ puts 'user is okay'
     sleeve_condition: rand(1..10),
     media_condition: rand(1..10),
     status: rand(0..1),
-    for_sale: rand(0..2),
+    for_sale: rand(0..2)
   )
 
-  if collection.status == "wished"
-    collection.pas_en_vente!
-  end
-
+  collection.pas_en_vente! if collection.status == 'wished'
 end
 
 puts 'collection is okay'
