@@ -7,16 +7,16 @@
     <% if action_name == "show" %>
       <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
-    <% if controller_name == 'wishlist'%>
+    <% if controller_name == 'wishlist' && current_user == collection.user %>
       <%= render partial: 'shared/remove_wished', locals: {collection: collection} %>
     <%end%>
-    <% if controller_name == "collection" %>
+    <% if controller_name == "collection" && current_user == collection.user %>
       <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
     <%end%>
-    <% if controller_name == "collection" %>
+    <% if controller_name == "collection" && current_user == collection.user %>
       <%= render partial: 'shared/sell_button', locals: {collection: collection} %>
     <%end%>
-     <% if controller_name == "ads" %>
+     <% if controller_name == "ads" && current_user == collection.user %>
       <%= render partial: 'shared/unsell_button', locals: {collection: collection} %>
     <%end%>
   </div>
