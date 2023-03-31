@@ -8,31 +8,29 @@
 
 require 'faker'
 require 'discogs'
-wrapper = Discogs::Wrapper.new("Test OAuth", user_token: "paamjOrFUPostpOgjjwwmrJmYQOJkqEiTWUkONpe")
+wrapper = Discogs::Wrapper.new('Test OAuth', user_token: 'paamjOrFUPostpOgjjwwmrJmYQOJkqEiTWUkONpe')
 
 10.times do
-  
- release = wrapper.get_release(rand(1..10000))
-  unless release.message == 'Release not found.'
-    Album.create!(
-      release_id: release.id,
-      image_url: release.images[0].uri,
-      title: release.title,
-      artist: release.artists[0].name,
-      year: release.year,
-      price: Faker::Commerce.price(range: 0..50.0, as_string: true)
-    )
-  end
+  release = wrapper.get_release(rand(1..10_000))
+  next if release.message == 'Release not found.'
+
+  Album.create!(
+    release_id: release.id,
+    image_url: release.images[0].uri,
+    title: release.title,
+    artist: release.artists[0].name,
+    year: release.year,
+    price: Faker::Commerce.price(range: 0..50.0, as_string: true)
+  )
 end
 
-puts "album is okay"
+puts 'album is okay'
 
 # seed for carts table
 10.times do
-  Cart.create!(
-  )
+  Cart.create!
 end
-puts "cart is okay"
+puts 'cart is okay'
 
 # seed for users table
 10.times do
@@ -45,44 +43,50 @@ puts "cart is okay"
     country: Faker::Address.country,
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.unique.email,
-    password: Faker::Internet.password(min_length: 6, max_length: 20, mix_case: true, special_characters: true) + "#{rand(1..50)}"
+    password: Faker::Internet.password(min_length: 6, max_length: 20, mix_case: true,
+                                       special_characters: true) + "#{rand(1..50)}"
   )
 end
 
-User.create(email: "admin@discotech.com", password: "Admin@THPforUser75", is_admin: true)
-puts "user is okay"
-
-
+User.create(email: 'admin@discotech.com', password: 'Admin@THPforUser75', is_admin: true)
+puts 'user is okay'
 
 # seed for collections table
 10.times do
-  Collection.create!(
-    album_id: Album.all.sample.id,
-    user_id: User.all.sample.id,
+  album = Album.all.sample
+  user = User.all.sample
+  status = Collection.statuses.keys.sample
+
+  # Vérifier s'il existe déjà une ligne avec le même album et le même utilisateur avec un autre statut
+  next if Collection.exists?(album_id: album.id, user_id: user.id, status: status == 'owned' ? 'wished' : 'owned')
+
+  # passer à la prochaine itération si une ligne existe déjà
+  collection = Collection.create!(
+    album:,
+    user:,
     sleeve_condition: rand(1..10),
     media_condition: rand(1..10),
-    status: rand(0..1),
+    status:,
     for_sale: Faker::Boolean.boolean(true_ratio: 0.4)
   )
 end
 
-puts "collection is okay"
+puts 'collection is okay'
 
 # seed for cartlines table
 10.times do
   Cartline.create!(
     collection_id: Collection.all.sample.id,
-    cart_id: Cart.all.sample.id,
+    cart_id: Cart.all.sample.id
   )
 end
-puts "cartline is okay"
-
+puts 'cartline is okay'
 
 # seed for orders table
 10.times do
   Order.create!(
     user_id: User.all.sample.id,
-    cart_id: Cart.all.sample.id,
+    cart_id: Cart.all.sample.id
   )
 end
-puts "order is okay"
+puts 'order is okay'

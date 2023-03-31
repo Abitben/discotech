@@ -1,0 +1,1 @@
+<%= button_to "Retirer de ma wishlist", remove_wishlist_path(album_id: collection.album.id, user_id: params[:user_id]), method: :delete, class: 'btn btn-danger', data: { confirm: 'Êtes-vous sûr ?' } %>

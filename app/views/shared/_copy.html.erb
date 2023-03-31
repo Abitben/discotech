@@ -8,6 +8,18 @@
       <%= link_to "Retour à toutes les annonces", marketplaces_path, class: 'btn' %>
     <% end %>
     <%= render partial: "shared/link_release", locals: {collection: collection} %>
+    <% if controller_name == 'wishlist'%>
+      <%= render partial: 'shared/remove_wished', locals: {collection: collection} %>
+    <%end%>
+    <% if controller_name == "collection" %>
+      <%= render partial: 'shared/remove_collection', locals: {collection: collection} %>
+    <%end%>
+    <% if controller_name == "collection" %>
+      <%= render partial: 'shared/sell_button', locals: {collection: collection} %>
+    <%end%>
+     <% if controller_name == "ads" %>
+      <%= render partial: 'shared/unsell_button', locals: {collection: collection} %>
+    <%end%>
   </div>
   <div class="col-sm-4">
     <div class="card-header ">
@@ -41,10 +53,10 @@
       <p><%= collection.user.first_name%> <%= collection.user.last_name%> </p>
       <br>
     </div>
-     <button class="myaccordion">Etat de l'album</button>
+    <button class="myaccordion">Etat de l'album</button>
     <div class="mypanel">
       <br>
-      <p><strong>Etat de la pochette : </strong> <%= collection.sleeve_condition.gsub("_", " ").capitalize %></p> 
+      <p><strong>Etat de la pochette : </strong> <%= collection.sleeve_condition.gsub("_", " ").capitalize %></p>
       <p><strong>Etat du vinyl : </strong> <%= collection.media_condition.gsub("_", " ").capitalize%> </p>
       <br>
     </div>

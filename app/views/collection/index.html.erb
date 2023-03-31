@@ -1,4 +1,6 @@
-<h1>Ma collection</h1>
-<% @user_collection.each do |collectable| %>
-<%= render partial: "albums/for_sale", locals: {collection: collectable}, layout: "shared/card_layout" %>
-<% end %>
+<div class='container'>
+  <h1>Ma collection</h1>
+  <% @user_collection.each do |collectable| %>
+    <%= render partial: "shared/copy", locals: {collection: collectable}, layout: "shared/card_layout" %>
+  <% end %>
+</div>
