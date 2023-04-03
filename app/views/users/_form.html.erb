@@ -50,6 +50,7 @@
     </div>
     <div class= 'col-lg-4 mt-4'>
       <h3>Changer d'avatar ?</h3>
+      <a>Format accepté : png, jpg</a>
       <%= form_tag user_avatars_path(@user), multipart: true do %>
         <%= file_field_tag :avatar, class: 'form-control mt-5' %>
         <%= submit_tag "Mettre à jour", class: 'btn btn-form mt-2' %>

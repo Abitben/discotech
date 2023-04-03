@@ -7,7 +7,8 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
-  # Include default devise modules. Others available are:
+  validates :avatar, attached: true, content_type: [:png, :jpg, :jpeg]
+      # Include default devise modules. Others available are:
   # ,:confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
 
