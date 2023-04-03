@@ -92,3 +92,5 @@ gem 'table_print', '~> 1.5'
 gem 'rubocop', '~> 1.48'
 
 gem 'rubocop-rails', '~> 2.18'
+
+gem 'active_storage_validations'
