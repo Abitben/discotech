@@ -40,9 +40,9 @@ Rail 7 / Ruby 3.2.1 / Postgre 14 / CSS / HTML / Javascript
 
 
 ## Auteurs
-* **Jordan** _alias_ [@outout14](https://github.com/outout14)
-* **Benjamin** _alias_ [@outout14](https://github.com/outout14)
-* **Ulrich** _alias_ [@outout14](https://github.com/outout14)
-* **Kévin** _alias_ [@outout14](https://github.com/outout14)
-* **Florian** _alias_ [@outout14](https://github.com/outout14)
+* **Jordan** _alias_ [[@Djo-75](https://github.com/Djo-75)]
+* **Benjamin** _alias_ [@Abitben](https://github.com/Abitben/)]
+* **Ulrich** _alias_ [@Ulrichvoitier](https://github.com/Ulrichvoitier)
+* **Kévin** _alias_ [@MacDielly](https://github.com/MacDielly)
+* **Florian** _alias_ [@Perzisso](https://github.com/Perzisso)
 
